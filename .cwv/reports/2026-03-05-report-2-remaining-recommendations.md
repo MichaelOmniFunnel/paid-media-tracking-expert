@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This report contains **verified pending optimizations** with **exact locations and implementation instructions**. All findings have been confirmed through direct inspection of GTM, NetSuite, and live site.
+This report contains **verified pending optimizations** with **exact locations and implementation instructions**. All findings have been confirmed through direct inspection of GTM, NetSuite, and live website.
 
 ### Current Core Web Vitals (Field Data)
 

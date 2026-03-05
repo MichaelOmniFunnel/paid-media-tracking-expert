@@ -6,3 +6,6 @@ GTM-*.json
 
 # Misc research files
 old research.txt
+
+# Config with API keys (use config.example.json as template)
+.cwv/config.json

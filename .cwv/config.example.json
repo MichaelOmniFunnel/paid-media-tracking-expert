@@ -1,5 +1,5 @@
 {
-  "api_key": "AIzaSyAZPJicwmoEvVc8jYMjKzGiCXPzkNgWD_Y",
+  "api_key": "YOUR_PSI_API_KEY_HERE",
   "default_strategy": "MOBILE",
   "thresholds": {
     "LCP": { "good": 2500, "needs_improvement": 4000, "unit": "ms" },
