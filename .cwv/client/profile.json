@@ -1,0 +1,139 @@
+{
+  "domain": "verociousmotorsports.com",
+  "name": "Verocious Motorsports",
+  "tech_stack": [
+    "NetSuite SuiteCommerce Advanced",
+    "Backbone.js",
+    "jQuery 3.5.1",
+    "BluePoint/Summit theme",
+    "bxSlider (hero carousel)",
+    "BluePoint.ReCaptcha extension",
+    "Slaask live chat (fixed position, 72px)",
+    "Klaviyo (16 scripts loading via GTM)",
+    "Google Tag Manager (GTM-57T4T5BW) - 36 tags",
+    "GA4 Active: G-862KMNBJX6 (GTM-managed)",
+    "GA4 OLD: G-MDZKSYLJ1B (NetSuite direct - TO REMOVE)",
+    "Google Ads (AW-11060543839)",
+    "Server-side GTM (GTM-P6KQPVPF at sst.verociousmotorsports.com)",
+    "Facebook/Meta via Stape CAPI (7 events server-side)",
+    "Bing Ads (3 GTM tags)",
+    "FontAwesome",
+    "Google Fonts (Exo, Nunito Sans, Oswald, Poppins, Nunito) via NetSuite Summit config",
+    "DroidSans, OpenSans (self-hosted)"
+  ],
+  "key_pages": [
+    { "url": "https://verociousmotorsports.com/", "type": "homepage" },
+    { "url": "https://verociousmotorsports.com/checkout", "type": "checkout" }
+  ],
+  "baseline_date": "2026-03-04",
+  "baseline_scores": {
+    "desktop": {
+      "LCP_s": 3.0,
+      "CLS": 0.25,
+      "INP_ms": 110,
+      "FCP_s": 1.4,
+      "TTFB_s": 0.6
+    },
+    "mobile": {
+      "LCP_s": 3.3,
+      "CLS": 0.75,
+      "INP_ms": 133,
+      "FCP_s": 2.5,
+      "TTFB_s": 1.0
+    }
+  },
+  "cwv_status": "FAILED",
+  "passing_metrics": ["INP"],
+  "failing_metrics": ["LCP", "CLS"],
+  "gsc_status": {
+    "last_updated": "2026-03-03",
+    "mobile_poor": 487,
+    "mobile_needs_improvement": 0,
+    "mobile_good": 0,
+    "desktop_poor": 480,
+    "desktop_needs_improvement": 7,
+    "desktop_good": 0
+  },
+  "verified_findings": {
+    "verification_date": "2026-03-05",
+    "lcp_elements": {
+      "desktop": {
+        "element": "img.home-slide-image.home-slide-image-lcp",
+        "has_fetchpriority": true,
+        "has_preload": true,
+        "src": "/site/img/banners/UltimateFabWarehouse_top_backdrop.webp",
+        "dimensions": { "width": 1200, "height": 410 },
+        "status": "OPTIMIZED"
+      },
+      "mobile": {
+        "element": "div.home-infoblock.home-infoblock0",
+        "type": "CSS background-image",
+        "has_img_tag": false,
+        "has_preload": true,
+        "src": "/site/img/Backgrounds/vms_homethumb_tubing_v3.jpg",
+        "status": "NEEDS FIX - convert to <img>"
+      }
+    },
+    "preload_status": {
+      "preloads_found": 2,
+      "preconnects_found": 0,
+      "missing_preconnects": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://www.googletagmanager.com",
+        "https://sst.verociousmotorsports.com"
+      ]
+    },
+    "cookie_banner": {
+      "class": "cookieconsent-overlay-dark",
+      "position": "fixed",
+      "default_display": "none",
+      "status": "ALREADY FIXED"
+    },
+    "old_ga4_location": {
+      "netsuite_path": "Commerce > Websites > Configuration > Integrations > Google Analytics 4",
+      "field_name": "GOOGLE ANALYTICS 4 ID",
+      "current_value": "G-MDZKSYLJ1B",
+      "action": "Clear field and Save"
+    },
+    "facebook_pixel": {
+      "in_netsuite": false,
+      "source": "GTM Stape Meta tags (7 client-side DT + 7 server-side CAPI)",
+      "direct_fbevents": true,
+      "action": "Remove direct fbevents.js if loading outside GTM"
+    },
+    "gtm_client_tags": {
+      "total": 36,
+      "breakdown": {
+        "stape_dt": 7,
+        "stape_meta": 7,
+        "klaviyo": 7,
+        "ofm_ga4": 6,
+        "bing_ads": 3,
+        "google_ads": 1,
+        "google_tag": 1,
+        "conversion_linker": 1,
+        "fbclid_capture": 1,
+        "other": 2
+      }
+    },
+    "js_bundle_size": {
+      "total_mb": 2.0,
+      "top_scripts": [
+        { "name": "shopping.js", "size_kb": 365.7, "percent": 18 },
+        { "name": "shopping_5.js", "size_kb": 335.5, "percent": 16 },
+        { "name": "shopping-templates_5.js", "size_kb": 249.4, "percent": 12 },
+        { "name": "gtag.js G-MDZKSYLJ1B (OLD)", "size_kb": 153.4, "percent": 7 },
+        { "name": "gtag.js G-862KMNBJX6", "size_kb": 152.7, "percent": 7 },
+        { "name": "gtm.js", "size_kb": 150.9, "percent": 7 },
+        { "name": "gtag.js AW-11060543839", "size_kb": 134.9, "percent": 6 }
+      ]
+    },
+    "render_blocking": {
+      "potential_savings_ms": 8990,
+      "scripts_in_head": 26,
+      "scripts_total": 36
+    }
+  },
+  "notes": "VERIFIED 2026-03-05: Cookie banner CLS already fixed (position:fixed). Desktop LCP optimized with img+fetchpriority. Mobile LCP still needs CSS bg-image→img conversion. Preloads implemented but preconnects missing. Old GA4 found in NetSuite Integrations (easy fix). Facebook NOT in NetSuite native config. 36 GTM tags audited. GSC shows 487/480 poor URLs (100% failing CWV)."
+}

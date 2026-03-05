@@ -1,0 +1,16 @@
+{
+  "api_key": "AIzaSyAZPJicwmoEvVc8jYMjKzGiCXPzkNgWD_Y",
+  "default_strategy": "MOBILE",
+  "thresholds": {
+    "LCP": { "good": 2500, "needs_improvement": 4000, "unit": "ms" },
+    "CLS": { "good": 0.1, "needs_improvement": 0.25, "unit": "score" },
+    "INP": { "good": 200, "needs_improvement": 500, "unit": "ms" },
+    "FCP": { "good": 1800, "needs_improvement": 3000, "unit": "ms" },
+    "TTFB": { "good": 800, "needs_improvement": 1800, "unit": "ms" },
+    "performance_score": { "good": 90, "needs_improvement": 50, "unit": "percent" }
+  },
+  "categories": ["PERFORMANCE"],
+  "locale": "en",
+  "max_concurrent_scans": 3,
+  "scan_delay_ms": 1000
+}
