@@ -1,0 +1,304 @@
+{
+  "timestamp": "2026-03-06T21:28:25.479Z",
+  "summary": {
+    "totalSkills": 27,
+    "totalAgents": 9,
+    "skillsPassing": 27,
+    "skillsWithIssues": 0,
+    "skillsWithWarnings": 0,
+    "agentsPassing": 9,
+    "agentsWithIssues": 0,
+    "agentsWithWarnings": 0,
+    "crossRefIssues": 0,
+    "overallScore": 100
+  },
+  "skillTypes": {
+    "workflow": 9,
+    "reference": 18,
+    "unknown": 0
+  },
+  "skills": [
+    {
+      "name": "ab-testing-experimentation",
+      "type": "reference",
+      "lines": 787,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "attribution-measurement",
+      "type": "reference",
+      "lines": 141,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "audience-audit",
+      "type": "workflow",
+      "lines": 229,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "bidding-strategy-audit",
+      "type": "workflow",
+      "lines": 185,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "callrail-integration",
+      "type": "reference",
+      "lines": 987,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "claude-code-mastery",
+      "type": "reference",
+      "lines": 711,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "consent-mode",
+      "type": "reference",
+      "lines": 600,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "conversion-optimization",
+      "type": "reference",
+      "lines": 113,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "creative-audit",
+      "type": "workflow",
+      "lines": 162,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "feed-catalog-optimization",
+      "type": "reference",
+      "lines": 677,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "full-audit",
+      "type": "workflow",
+      "lines": 102,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "ga4-bigquery-analytics",
+      "type": "reference",
+      "lines": 1312,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "google-ads-scripts",
+      "type": "reference",
+      "lines": 760,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "google-ads-tracking",
+      "type": "reference",
+      "lines": 153,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "klaviyo-integration",
+      "type": "reference",
+      "lines": 745,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "landing-page-audit",
+      "type": "workflow",
+      "lines": 46,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "meta-ads-tracking",
+      "type": "reference",
+      "lines": 188,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "monthly-report",
+      "type": "workflow",
+      "lines": 144,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "netsuite-tracking",
+      "type": "reference",
+      "lines": 981,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "new-client",
+      "type": "workflow",
+      "lines": 70,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "quarterly-review",
+      "type": "workflow",
+      "lines": 226,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "server-side-tracking",
+      "type": "reference",
+      "lines": 795,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "shopify-tracking",
+      "type": "reference",
+      "lines": 631,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "tiktok-ads-tracking",
+      "type": "reference",
+      "lines": 680,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "tracking-audit",
+      "type": "workflow",
+      "lines": 62,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "utm-strategy",
+      "type": "reference",
+      "lines": 450,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "woocommerce-tracking",
+      "type": "reference",
+      "lines": 727,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    }
+  ],
+  "agents": [
+    {
+      "name": "attribution-analyst",
+      "lines": 115,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-optimizer",
+      "lines": 165,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "compliance-auditor",
+      "lines": 219,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "creative-analyst",
+      "lines": 177,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "keyword-strategist",
+      "lines": 189,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "landing-page-analyst",
+      "lines": 102,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "platform-strategist",
+      "lines": 115,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "signal-architect",
+      "lines": 75,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "name": "tracking-auditor",
+      "lines": 102,
+      "issues": [],
+      "warnings": [],
+      "status": "PASS"
+    }
+  ],
+  "crossReferences": []
+}

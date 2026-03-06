@@ -1,6 +1,7 @@
 ---
 name: conversion-optimization
 description: CRO benchmarks for paid media landing pages, form optimization, page speed impact on ad performance, mobile UX, and trust signals. Use when someone mentions conversion rate, CRO, form optimization, landing page speed, trust signals, or why conversion rate is low.
+model: sonnet
 ---
 
 # Conversion Optimization for Paid Media
