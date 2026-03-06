@@ -2,6 +2,7 @@
 name: klaviyo-integration
 description: Audience sync to Google, Meta, and TikTok, revenue attribution, server-side event forwarding, ecommerce integrations, and webhook automation. Use when someone mentions Klaviyo, email audience sync, Klaviyo segments to ads, or Klaviyo webhook integration.
 disable-model-invocation: true
+model: sonnet
 ---
 
 # Klaviyo Integration for Paid Media & Tracking

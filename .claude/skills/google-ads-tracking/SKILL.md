@@ -1,6 +1,7 @@
 ---
 name: google-ads-tracking
 description: Implementation reference for Google Ads conversion tracking, Google Tag, gtag.js, GTM, Enhanced Conversions, and Consent Mode v2. Use when someone mentions Google conversion tracking, gclid, enhanced conversions, Google Tag setup, or Google not tracking conversions.
+model: sonnet
 ---
 
 # Google Ads Tracking Implementation

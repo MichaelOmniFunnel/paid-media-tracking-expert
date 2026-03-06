@@ -2,6 +2,7 @@
 name: callrail-integration
 description: DNI setup, offline conversion import, CAPI integration, webhook to SGTM, form tracking, multi-touch attribution, and API usage. Use when someone mentions CallRail, call tracking, dynamic number insertion, offline conversions from calls, or phone lead attribution.
 disable-model-invocation: true
+model: sonnet
 ---
 
 # CallRail Integration for Paid Media & Tracking

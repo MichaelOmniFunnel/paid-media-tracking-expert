@@ -57,7 +57,7 @@ Save all raw data to `clients/{client-name}/reports/{year}-Q{quarter}-raw-data/`
 Deploy the following analyses simultaneously using subagents:
 
 **Agent 1: Platform Strategist**
-- Read `.claude/agents/platform-strategist.md` for methodology
+- Delegate to the platform-strategist agent
 - Evaluate campaign structure evolution over the quarter
 - Assess whether the current structure supports the client's growth trajectory
 - Identify structural changes needed for the next quarter
@@ -65,7 +65,7 @@ Deploy the following analyses simultaneously using subagents:
 - Assess audience infrastructure readiness for scaling
 
 **Agent 2: Attribution Analyst**
-- Read `.claude/agents/attribution-analyst.md` for methodology
+- Delegate to the attribution-analyst agent
 - Apply the attribution philosophy from `.claude/frameworks/attribution-philosophy.md`
 - Reconcile platform reported conversions against actual ecommerce/CRM data
 - Calculate overlap factor and compare to prior quarters
@@ -215,8 +215,8 @@ The final deliverable is a comprehensive client facing quarterly strategy review
 
 - Requires Chrome browser access to navigate all platform UIs
 - Requires Meta Ads MCP tools for pulling Meta data (optional, can use Chrome)
-- Requires the platform strategist agent at .claude/agents/platform-strategist.md
-- Requires the attribution analyst agent at .claude/agents/attribution-analyst.md
+- Uses the platform-strategist agent (auto-discovered)
+- Uses the attribution-analyst agent (auto-discovered)
 - Requires the deliverable recipes framework at .claude/frameworks/deliverable-recipes.md
 - Requires the vertical benchmarks framework at .claude/frameworks/vertical-benchmarks.md
 - Requires the attribution philosophy framework at .claude/frameworks/attribution-philosophy.md

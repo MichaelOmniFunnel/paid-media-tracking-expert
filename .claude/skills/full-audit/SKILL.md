@@ -51,26 +51,26 @@ Before launching specialist agents, perform initial site reconnaissance:
 Launch the following analyses simultaneously using subagents:
 
 **Agent 1: Tracking Auditor**
-- Read `.claude/agents/tracking-auditor.md` for methodology
+- Delegate to the tracking-auditor agent
 - Audit all tracking implementations across discovered pages
 - Use Chrome tools to inspect page source and network requests
 
 **Agent 2: Landing Page Analyst**
-- Read `.claude/agents/landing-page-analyst.md` for methodology
+- Delegate to the landing-page-analyst agent
 - Evaluate all key landing pages for conversion optimization
 - Test mobile experience, forms, and conversion flows
 
 **Agent 3: Signal Architect**
-- Read `.claude/agents/signal-architect.md` for methodology
+- Delegate to the signal-architect agent
 - Map signal flow from website to each ad platform
 - Evaluate CAPI, enhanced conversions, first-party data infrastructure
 
 **Agent 4: Platform Strategist**
-- Read `.claude/agents/platform-strategist.md` for methodology
+- Delegate to the platform-strategist agent
 - Assess campaign structure readiness, audience infrastructure, feed/catalog health
 
 **Agent 5: Attribution Analyst**
-- Read `.claude/agents/attribution-analyst.md` for methodology
+- Delegate to the attribution-analyst agent
 - Identify measurement gaps, attribution blind spots, cross-platform issues
 
 ### Step 4: Report Synthesis

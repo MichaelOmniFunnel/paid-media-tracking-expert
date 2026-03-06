@@ -30,7 +30,7 @@ $ARGUMENTS should include:
 
 Check `clients/{client-name}/` for existing profile, history, and previous findings. Read the full history file before doing anything else so you have complete context on past audience discussions, list uploads, and targeting decisions.
 
-If no client folder exists, create one following the standard structure. Read `.claude/agents/platform-strategist.md` for audience evaluation methodology.
+If no client folder exists, create one following the standard structure. Delegate audience evaluation to the platform-strategist agent.
 
 ### Step 2: Pull Audience Lists and Targeting Configurations
 
@@ -223,6 +223,6 @@ The final deliverable is a draft audience infrastructure audit report saved to t
 - Requires Chrome browser access to navigate Google Ads, Meta Ads, and TikTok Ads UIs
 - Requires Meta Ads MCP tools for pulling audience and ad set data (optional, can use Chrome)
 - Requires the deliverable recipes framework at .claude/frameworks/deliverable-recipes.md
-- Requires the platform strategist agent at .claude/agents/platform-strategist.md
+- Uses the platform-strategist agent (auto-discovered)
 - Requires the Klaviyo integration skill at .claude/skills/klaviyo-integration/SKILL.md (if Klaviyo is active)
 - Requires an existing client profile at clients/{client-name}/ (or will create one)

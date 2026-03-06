@@ -33,3 +33,9 @@ node_modules/
 # Build artifacts
 dist/
 build/
+
+# Research docs (large, not needed in repo)
+research/
+mcp-ecosystem-research-2026.md
+mcp-setup-guide.md
+repo-evaluation.md

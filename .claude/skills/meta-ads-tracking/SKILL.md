@@ -1,6 +1,7 @@
 ---
 name: meta-ads-tracking
 description: Implementation reference for Meta Pixel, Conversions API (CAPI), Advanced Matching, Aggregated Event Measurement, and domain verification. Use when someone mentions Meta Pixel, Facebook Pixel, CAPI setup, Meta event match quality, advanced matching, or Meta not tracking conversions.
+model: sonnet
 ---
 
 # Meta Ads Tracking Implementation

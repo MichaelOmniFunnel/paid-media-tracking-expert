@@ -45,7 +45,7 @@ Save raw bidding configuration data to `clients/{client-name}/reports/{date}-bid
 
 ### Step 3: Launch Bidding Strategy Evaluation
 
-Read `.claude/agents/platform-strategist.md` for campaign structure and bidding methodology. Apply the following analysis:
+Use the platform-strategist agent methodology for campaign structure and bidding evaluation. Apply the following analysis:
 
 **Strategy Selection vs Data Volume:**
 
@@ -180,5 +180,5 @@ The final deliverable is a draft bidding strategy audit report saved to the clie
 - Requires Meta Ads MCP tools for pulling Meta campaign data (optional, can use Chrome)
 - Requires the deliverable recipes framework at .claude/frameworks/deliverable-recipes.md
 - Requires the vertical benchmarks framework at .claude/frameworks/vertical-benchmarks.md
-- Requires the platform strategist agent at .claude/agents/platform-strategist.md
+- Uses the platform-strategist agent (auto-discovered)
 - Requires an existing client profile at clients/{client-name}/ (or will create one)

@@ -1,6 +1,7 @@
 ---
 name: tiktok-ads-tracking
 description: Implementation reference for TikTok Pixel, Events API, Advanced Matching, Catalog and Shop integration, Spark Ads tracking, and Smart+ campaigns. Use when someone mentions TikTok Pixel, TikTok Events API, TikTok tracking, TikTok Shop, or TikTok not tracking conversions.
+model: sonnet
 ---
 
 # TikTok Ads Tracking Implementation

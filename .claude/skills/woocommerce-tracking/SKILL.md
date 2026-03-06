@@ -2,6 +2,7 @@
 name: woocommerce-tracking
 description: Conversion tracking on WooCommerce including GTM integration, dataLayer setup, server-side tracking via Stape, and WordPress plugin configurations. Use when someone mentions WooCommerce tracking, WordPress analytics, WooCommerce conversions, or ecommerce tracking on WooCommerce.
 disable-model-invocation: true
+model: sonnet
 ---
 
 # WooCommerce Conversion Tracking Implementation Guide

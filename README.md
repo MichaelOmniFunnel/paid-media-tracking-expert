@@ -80,7 +80,7 @@ Each team member needs these MCP servers connected in their Claude Code config:
 
 3. **Asana MCP**: Add the Asana MCP server with your personal access token. The project board GID is `1213561988868639`.
 
-MCP server configs go in `~/.claude/settings.json` under the `mcpServers` key. Each person uses their own auth tokens.
+MCP server configs go in `~/.claude/mcp.json` (user level) or `.mcp.json` (project level). See Claude Code docs for format. Each person uses their own auth tokens.
 
 ## Usage
 
@@ -96,6 +96,10 @@ claude
 - Ask for any audit type: tracking, creative, budget, full, etc.
 - Claude updates Asana automatically as work progresses
 - All platform UIs are accessible via Chrome browser automation
+
+### Personal overrides
+
+Create `CLAUDE.local.md` in the project root for machine specific instructions (auto loaded, auto gitignored). Use for personal preferences that should not affect the team.
 
 ### What NOT to do
 - Never modify client ad accounts, GTM containers, or tracking without explicit approval
