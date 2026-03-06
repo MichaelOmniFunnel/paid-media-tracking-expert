@@ -4,6 +4,10 @@ clients/*/
 
 # Local settings (hooks, permissions - machine specific)
 .claude/settings.local.json
+# Claude Code local files (auto-generated, machine-specific)
+CLAUDE.local.md
+.claude/agent-memory-local/
+
 
 # OS files
 .DS_Store

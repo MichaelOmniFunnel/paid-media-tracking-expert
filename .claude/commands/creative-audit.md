@@ -39,7 +39,7 @@ Save raw creative data to `clients/{client-name}/reports/{date}-creative-audit-r
 
 ### Step 3: Launch Creative Analysis
 
-Read `.claude/agents/platform-strategist/platform-strategist.md` for creative evaluation methodology. Apply the following analysis to every active creative:
+Read `.claude/agents/platform-strategist.md` for creative evaluation methodology. Apply the following analysis to every active creative:
 
 **Age and Decay Analysis:**
 - Calculate the age of each creative (days since launch)
@@ -151,5 +151,5 @@ The final deliverable is a draft creative performance audit report saved to the 
 - Requires Meta Ads MCP tools for pulling Meta creative data
 - Requires the deliverable recipes framework at .claude/frameworks/deliverable-recipes.md
 - Requires the A/B testing skill at .claude/skills/ab-testing-experimentation/SKILL.md
-- Requires the platform strategist agent at .claude/agents/platform-strategist/platform-strategist.md
+- Requires the platform strategist agent at .claude/agents/platform-strategist.md
 - Requires an existing client profile at clients/{client-name}/ (or will create one)

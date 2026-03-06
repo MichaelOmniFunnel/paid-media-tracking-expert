@@ -56,7 +56,9 @@ Edit `~/.claude/settings.json` and ensure it contains:
 }
 ```
 
-### Step 4: Create local settings (hooks and permissions)
+### Step 4: Create local settings (hooks)
+
+The repo includes `.claude/settings.json` with shared permission denies that apply to everyone. The local file below adds hooks that are machine specific (Windows PowerShell commands):
 
 Create `.claude/settings.local.json` in the project root (this file is gitignored):
 
@@ -160,5 +162,6 @@ scripts/gtm/               5 GTM audit scripts
 templates/                 Report and handoff templates
 clients/_template/         New client scaffolding
 clients/[name]/            Per client data (gitignored)
+.claude/settings.json         Shared team settings (committed)
 .claude/settings.local.json  Local hooks and permissions (gitignored)
 ```
