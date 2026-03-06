@@ -1,0 +1,84 @@
+{
+  "client_name": "",
+  "website_url": "",
+  "industry": "",
+  "business_model": "",
+  "created_date": "",
+  "last_audit_date": "",
+
+  "tech_stack": {
+    "cms": "",
+    "hosting": "",
+    "tag_manager": "",
+    "analytics": "",
+    "crm": "",
+    "ecommerce_platform": "",
+    "form_tool": "",
+    "consent_manager": ""
+  },
+
+  "ad_platforms": {
+    "google_ads": {
+      "active": false,
+      "account_id": "",
+      "conversion_id": "",
+      "remarketing_id": "",
+      "merchant_center_id": "",
+      "ga4_property_id": "",
+      "gtm_container_id": ""
+    },
+    "meta_ads": {
+      "active": false,
+      "ad_account_id": "",
+      "pixel_id": "",
+      "business_manager_id": "",
+      "catalog_id": "",
+      "capi_configured": false,
+      "domain_verified": false
+    },
+    "tiktok_ads": {
+      "active": false,
+      "advertiser_id": "",
+      "pixel_id": "",
+      "events_api_configured": false,
+      "catalog_id": ""
+    }
+  },
+
+  "conversion_goals": {
+    "primary": "",
+    "secondary": [],
+    "conversion_values": {}
+  },
+
+  "key_pages": {
+    "homepage": "",
+    "landing_pages": [],
+    "product_pages": [],
+    "form_pages": [],
+    "thank_you_pages": [],
+    "checkout_pages": []
+  },
+
+  "monthly_ad_spend": {
+    "google_ads": "",
+    "meta_ads": "",
+    "tiktok_ads": "",
+    "total": ""
+  },
+
+  "contacts": {
+    "primary": {
+      "name": "",
+      "email": "",
+      "role": ""
+    },
+    "developer": {
+      "name": "",
+      "email": "",
+      "role": ""
+    }
+  },
+
+  "notes": ""
+}

@@ -1,11 +1,31 @@
-# Reference/research materials (not part of core project)
-claude-code-orchestration-team/
+# Client data (contains real account IDs, session history)
+clients/*/
+!clients/_template/
 
-# GTM exports (contain sensitive container data)
-GTM-*.json
+# Local settings (hooks, permissions - machine specific)
+.claude/settings.local.json
 
-# Misc research files
-old research.txt
+# OS files
+.DS_Store
+Thumbs.db
 
-# Config with API keys (use config.example.json as template)
-.cwv/config.json
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Environment and credentials
+.env
+.env.*
+*.key
+*.pem
+
+# Node
+node_modules/
+
+# Old CWV project files
+.cwv/
+
+# Build artifacts
+dist/
+build/

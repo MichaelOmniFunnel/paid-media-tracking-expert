@@ -1,0 +1,75 @@
+{
+  "last_updated": "",
+  "audited_pages": [],
+
+  "google": {
+    "gtm": {
+      "present": false,
+      "container_ids": [],
+      "placement": "",
+      "consent_mode_v2": false
+    },
+    "gtag": {
+      "present": false,
+      "conversion_ids": [],
+      "enhanced_conversions": false,
+      "dynamic_remarketing": false
+    },
+    "ga4": {
+      "present": false,
+      "measurement_id": "",
+      "linked_to_ads": false
+    },
+    "events_detected": [],
+    "issues": []
+  },
+
+  "meta": {
+    "pixel": {
+      "present": false,
+      "pixel_id": "",
+      "advanced_matching": false,
+      "advanced_matching_params": []
+    },
+    "capi": {
+      "configured": false,
+      "platform": "",
+      "deduplication": false
+    },
+    "events_detected": [],
+    "emq_score": null,
+    "domain_verified": false,
+    "aem_events": [],
+    "issues": []
+  },
+
+  "tiktok": {
+    "pixel": {
+      "present": false,
+      "pixel_id": "",
+      "advanced_matching": false
+    },
+    "events_api": {
+      "configured": false,
+      "deduplication": false
+    },
+    "events_detected": [],
+    "issues": []
+  },
+
+  "server_side": {
+    "gtm_ss": false,
+    "gtm_ss_url": "",
+    "stape": false,
+    "custom_implementation": false,
+    "notes": ""
+  },
+
+  "consent": {
+    "banner_present": false,
+    "tool": "",
+    "google_consent_mode": false,
+    "tcf_compliant": false,
+    "notes": ""
+  }
+}
