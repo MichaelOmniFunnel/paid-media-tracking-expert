@@ -1,6 +1,6 @@
 ---
-name: UTM Strategy
-description: UTM naming conventions, dynamic parameter generation per platform, GA4 attribution logic, auto-tagging vs manual tagging, and UTM debugging
+name: utm-strategy
+description: UTM naming conventions, dynamic parameter generation per platform, GA4 attribution logic, auto-tagging vs manual tagging, and UTM debugging. Use when someone mentions UTMs, campaign tracking parameters, where traffic is coming from, attribution confusion, or UTM naming conventions.
 ---
 
 # UTM Strategy for Paid Media

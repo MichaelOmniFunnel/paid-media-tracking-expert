@@ -1,6 +1,6 @@
 ---
-name: Consent Mode
-description: Google Consent Mode v2 implementation, cookie banner integrations, GTM consent configuration, TCF 2.0, regional requirements, and conversion modeling impact
+name: consent-mode
+description: Google Consent Mode v2 implementation, cookie banner integrations, GTM consent configuration, TCF 2.0, regional requirements, and conversion modeling impact. Use when someone mentions consent mode, cookie banners, GDPR tracking, privacy compliance in ads, consent signals, or how consent affects conversions.
 ---
 
 # Google Consent Mode v2 Implementation

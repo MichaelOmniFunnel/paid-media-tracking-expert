@@ -1,6 +1,6 @@
 ---
-name: GA4 BigQuery Analytics
-description: BigQuery export, SQL queries for paid media analysis, POAS calculations, audience building, and Looker Studio integration
+name: ga4-bigquery-analytics
+description: BigQuery export, SQL queries for paid media analysis, POAS calculations, audience building, and Looker Studio integration. Use when someone mentions BigQuery, GA4 export, SQL analytics, custom audiences from GA4 data, Looker Studio, or advanced analytics queries.
 context: fork
 ---
 # GA4 BigQuery Analytics for Paid Media

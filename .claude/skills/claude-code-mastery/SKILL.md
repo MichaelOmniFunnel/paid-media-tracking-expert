@@ -1,6 +1,6 @@
 ---
 name: claude-code-mastery
-description: Advanced Claude Code configuration patterns, agent orchestration, MCP setup, CLAUDE.md best practices, skills/commands architecture, and marketing agency workflows. Use when optimizing Claude Code setup, configuring agents, or building new skills and workflows.
+description: Advanced Claude Code configuration patterns, agent orchestration, MCP setup, CLAUDE.md best practices, skills and agents architecture, and marketing agency workflows. Use when optimizing Claude Code setup, configuring agents, building new skills, setting up hooks, or troubleshooting Claude Code configuration.
 ---
 
 # Claude Code Mastery Reference (2025/2026)

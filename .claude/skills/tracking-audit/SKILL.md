@@ -1,3 +1,9 @@
+---
+name: tracking-audit
+description: Focused tracking implementation audit across Google Ads, Meta Ads, and TikTok. Evaluates pixel installation, GTM setup, event configuration, CAPI health, and data layer accuracy. Use when someone mentions 'tracking audit', 'check my pixels', 'conversion tracking issues', 'are my tags firing', 'GTM audit', or tracking problems.
+argument-hint: "[client-name] [website-url]"
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+---
 # Tracking Implementation Audit
 
 Focused audit of conversion tracking setup across Google Ads, Meta Ads, and TikTok Ads.

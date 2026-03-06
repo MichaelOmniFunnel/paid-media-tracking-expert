@@ -1,3 +1,9 @@
+---
+name: new-client
+description: Onboard a new client with profile setup, tracking reconnaissance, and initial platform discovery. Use when someone mentions 'new client', 'onboarding', 'client setup', 'just signed a new account', or 'new engagement'.
+argument-hint: "[client-name] [website-url]"
+allowed-tools: Read, Grep, Glob, Bash, Write
+---
 # New Client Onboarding
 
 Sets up a new client in the system with profile, tracking configuration, and initial reconnaissance.

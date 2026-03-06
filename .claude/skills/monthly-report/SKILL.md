@@ -1,3 +1,9 @@
+---
+name: monthly-report
+description: Generate comprehensive monthly performance report pulling data from all platforms with blended metrics and anomaly detection. Use when someone mentions 'monthly report', 'performance report', 'client report', 'how did we do this month', or end of month reporting.
+argument-hint: "[client-name] [month]"
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+---
 # Monthly Client Performance Report
 
 Generate a comprehensive monthly performance report for a client by pulling data from all platforms, reconciling against actuals, calculating blended metrics, running anomaly detection, and producing a draft report for Michael's review.

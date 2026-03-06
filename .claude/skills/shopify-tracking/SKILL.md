@@ -1,6 +1,6 @@
 ---
-name: Shopify Tracking
-description: Conversion tracking on Shopify including native integrations, GTM setup, Shopify Pixel API, server-side tracking via Stape, and CAPI configuration
+name: shopify-tracking
+description: Conversion tracking on Shopify including native integrations, GTM setup, Shopify Pixel API, server-side tracking via Stape, and CAPI configuration. Use when someone mentions Shopify tracking, Shopify checkout tracking, Shopify pixels, or ecommerce tracking on Shopify.
 disable-model-invocation: true
 ---
 

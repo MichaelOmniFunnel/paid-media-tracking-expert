@@ -1,6 +1,6 @@
 ---
-name: Feed and Catalog Optimization
-description: Google Merchant Center, Meta Catalog, TikTok Catalog, custom labels, supplemental feeds, and POAS feed strategies
+name: feed-catalog-optimization
+description: Google Merchant Center, Meta Catalog, TikTok Catalog, custom labels, supplemental feeds, and POAS feed strategies. Use when someone mentions product feeds, shopping campaigns, catalog issues, custom labels, feed optimization, disapproved products, or products not showing.
 context: fork
 ---
 # Feed & Catalog Optimization

@@ -1,6 +1,6 @@
 ---
-name: Server Side Tracking
-description: GTM Server-Side, Stape.io, click ID persistence, event deduplication, first-party data enrichment, consent handling, and failure mode troubleshooting
+name: server-side-tracking
+description: GTM Server-Side, Stape.io, click ID persistence, event deduplication, first-party data enrichment, consent handling, and failure mode troubleshooting. Use whenever someone mentions Stape, SGTM, server container, server-side tagging, first-party cookies, click ID loss, event deduplication, or server-side tracking not working.
 ---
 
 # Server-Side Tracking Architecture

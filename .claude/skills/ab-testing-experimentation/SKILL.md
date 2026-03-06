@@ -1,6 +1,6 @@
 ---
-name: A/B Testing and Experimentation
-description: Platform experiments, incrementality testing, geo tests, statistical methodology, and creative testing frameworks for paid media
+name: ab-testing-experimentation
+description: Platform experiments, incrementality testing, geo tests, statistical methodology, and creative testing frameworks for paid media. Use whenever someone mentions A/B testing, experiments, incrementality, statistical significance, holdout groups, geo tests, creative testing, or wants to know if something actually works versus correlation.
 context: fork
 ---
 # A/B Testing & Experimentation for Paid Media

@@ -1,6 +1,6 @@
 ---
-name: NetSuite Tracking
-description: Conversion tracking on NetSuite SuiteCommerce and SCA including GTM integration, dataLayer implementation, SuiteScript server-side tracking
+name: netsuite-tracking
+description: Conversion tracking on NetSuite SuiteCommerce and SCA including GTM integration, dataLayer implementation, SuiteScript server-side tracking. Use when someone mentions NetSuite tracking, SuiteCommerce analytics, SCA dataLayer, or ecommerce tracking on NetSuite.
 disable-model-invocation: true
 ---
 

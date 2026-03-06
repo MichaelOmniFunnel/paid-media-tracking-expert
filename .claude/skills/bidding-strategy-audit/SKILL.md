@@ -1,3 +1,9 @@
+---
+name: bidding-strategy-audit
+description: Bidding strategy and budget efficiency evaluation across all platforms. Covers strategy alignment, learning phase health, target setting, and automated bidding effectiveness. Use when someone mentions 'bidding audit', 'bid strategy', 'target CPA', 'target ROAS', 'smart bidding', 'learning phase', or budget underspending.
+argument-hint: "[client-name]"
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+---
 # Bidding Strategy Audit
 
 Comprehensive evaluation of bidding strategies, target alignment, learning phase health, and budget efficiency across all active ad platforms.

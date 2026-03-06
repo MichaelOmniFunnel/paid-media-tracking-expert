@@ -1,6 +1,6 @@
 ---
-name: Google Ads Scripts
-description: MCC and account level scripts for budget pacing, search term mining, quality score tracking, anomaly alerts, and automated reporting
+name: google-ads-scripts
+description: MCC and account level scripts for budget pacing, search term mining, quality score tracking, anomaly alerts, and automated reporting. Use when someone mentions Google Ads scripts, automation, budget alerts, automated rules, MCC scripts, or wants to automate routine Google Ads tasks.
 context: fork
 ---
 # Google Ads Scripts

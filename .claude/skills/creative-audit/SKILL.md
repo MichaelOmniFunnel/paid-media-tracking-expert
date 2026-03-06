@@ -1,3 +1,9 @@
+---
+name: creative-audit
+description: Cross-platform creative performance audit covering fatigue detection, format diversity, engagement decay, and production roadmap. Use when someone mentions 'creative audit', 'ad fatigue', 'creative refresh', 'which ads are working', 'creative performance', or stale ads.
+argument-hint: "[client-name]"
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+---
 # Creative Performance Audit
 
 Comprehensive audit of creative assets across all active ad platforms to identify fatigue, format gaps, top performers for scaling, and a production roadmap for the next 90 days.

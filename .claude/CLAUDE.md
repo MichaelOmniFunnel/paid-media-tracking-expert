@@ -79,4 +79,4 @@ Google Ads UI > OFM audit order, flag issues | Meta Ads Manager > learning phase
 
 ## Reference Architecture
 
-Frameworks: .claude/frameworks/ | Agents: .claude/agents/ | Commands: .claude/commands/ | Skills: .claude/skills/ | Scripts: scripts/chrome/ + scripts/gtm/ | Templates: templates/ | Client data: clients/ | Rules: .claude/rules/
+Frameworks: .claude/frameworks/ | Agents: .claude/agents/ | Skills: .claude/skills/ (27 total, includes former commands) | Hooks: .claude/hooks/ | Scripts: scripts/chrome/ + scripts/gtm/ | Templates: templates/ | Client data: clients/ | Rules: .claude/rules/

@@ -1,6 +1,6 @@
 ---
-name: Attribution and Measurement
-description: Cross-platform attribution, conversion modeling, measurement frameworks, value-based bidding readiness, and incrementality testing
+name: attribution-measurement
+description: Cross-platform attribution, conversion modeling, measurement frameworks, value-based bidding readiness, and incrementality testing. Use when someone mentions attribution, cross-platform measurement, conversion modeling, VBB readiness, data-driven attribution, last-click vs multi-touch, or which platform is driving results.
 ---
 
 # Attribution & Measurement for Paid Media

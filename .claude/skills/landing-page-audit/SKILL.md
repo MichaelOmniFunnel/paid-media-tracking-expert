@@ -1,3 +1,9 @@
+---
+name: landing-page-audit
+description: Landing page performance audit for paid media quality. Evaluates page speed, UX friction, conversion flow, mobile experience, and message match. Use when someone mentions 'landing page audit', 'conversion rate', 'page speed', 'post-click experience', 'quality score', or 'why aren't people converting'.
+argument-hint: "[client-name] [landing-page-url]"
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+---
 # Landing Page Performance Audit
 
 Focused audit of landing page experience, conversion flow, and UX for paid media performance.

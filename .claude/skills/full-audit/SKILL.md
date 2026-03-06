@@ -1,3 +1,9 @@
+---
+name: full-audit
+description: Complete multi-platform paid media audit orchestrating all specialist agents in parallel. Covers tracking, landing pages, signal quality, platform strategy, and attribution. Use when someone says 'full audit', 'complete audit', 'audit everything', 'account health check', or wants a comprehensive review of their advertising.
+argument-hint: "[client-name] [website-url]"
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+---
 # Full Paid Media & Tracking Audit
 
 Comprehensive audit of a client's entire advertising performance ecosystem. This orchestrates all five specialist agents in parallel to produce a complete assessment.

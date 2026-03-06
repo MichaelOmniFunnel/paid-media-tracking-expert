@@ -1,3 +1,9 @@
+---
+name: quarterly-review
+description: Comprehensive quarterly strategy review with cross-platform analysis, benchmark comparison, trend identification, and strategic planning. Use when someone mentions 'quarterly review', 'QBR', 'quarterly strategy', 'Q1 review', 'Q2 review', 'Q3 review', 'Q4 review', or strategic planning.
+argument-hint: "[client-name] [quarter]"
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+---
 # Quarterly Strategy Review
 
 Comprehensive quarterly performance review with cross platform analysis, benchmark comparison, trend identification, and strategic planning for the upcoming quarter.

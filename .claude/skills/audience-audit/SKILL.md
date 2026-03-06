@@ -1,3 +1,9 @@
+---
+name: audience-audit
+description: Audience infrastructure audit covering targeting strategy, list health, remarketing coverage, overlap analysis, and exclusion strategy. Use when someone mentions 'audience audit', 'targeting review', 'audience overlap', 'remarketing setup', 'custom audiences', or 'lookalike audiences'.
+argument-hint: "[client-name]"
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+---
 # Audience Infrastructure Audit
 
 Comprehensive audit of audience targeting, list health, remarketing coverage, overlap analysis, and exclusion strategy across all active ad platforms.
