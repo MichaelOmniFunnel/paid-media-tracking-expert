@@ -7,9 +7,9 @@ OmniFunnel Marketing's Claude Code project for paid media management, tracking i
 | Directory | Contents |
 |-----------|----------|
 | `.claude/` | CLAUDE.md (master instructions), 11 frameworks, 3 rules |
-| `agents/` | 9 specialist agents (tracking, creative, budget, attribution, etc.) |
-| `commands/` | 9 audit and workflow commands (/full-audit, /tracking-audit, /new-client, etc.) |
-| `skills/` | 18 project skills (platform tracking, consent mode, attribution, etc.) |
+| `.claude/agents/` | 9 specialist agents (tracking, creative, budget, attribution, etc.) |
+| `.claude/commands/` | 9 audit and workflow commands (/full-audit, /tracking-audit, /new-client, etc.) |
+| `.claude/skills/` | 18 project skills (platform tracking, consent mode, attribution, etc.) |
 | `scripts/chrome/` | 11 Chrome automation scripts (dataLayer, pixels, cookies, GA4, etc.) |
 | `scripts/gtm/` | 5 GTM audit scripts (ES6 detector, tag inventory, firing order, etc.) |
 | `templates/` | Audit report and developer handoff templates |
@@ -152,9 +152,9 @@ claude
 .claude/CLAUDE.md          Master instructions (82 lines)
 .claude/frameworks/        11 methodology frameworks
 .claude/rules/             3 rule sets (anomaly flagging, client memory, security)
-agents/                    9 specialist agents
-commands/                  9 workflow commands
-skills/                    18 project skills
+.claude/agents/            9 specialist agents
+.claude/commands/          9 workflow commands
+.claude/skills/            18 project skills
 scripts/chrome/            11 browser automation scripts
 scripts/gtm/               5 GTM audit scripts
 templates/                 Report and handoff templates

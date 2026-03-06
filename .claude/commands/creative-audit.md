@@ -39,7 +39,7 @@ Save raw creative data to `clients/{client-name}/reports/{date}-creative-audit-r
 
 ### Step 3: Launch Creative Analysis
 
-Read `agents/platform-strategist.md` for creative evaluation methodology. Apply the following analysis to every active creative:
+Read `.claude/agents/platform-strategist/platform-strategist.md` for creative evaluation methodology. Apply the following analysis to every active creative:
 
 **Age and Decay Analysis:**
 - Calculate the age of each creative (days since launch)
@@ -56,7 +56,7 @@ Read `agents/platform-strategist.md` for creative evaluation methodology. Apply 
 **Format Diversity Assessment:**
 - Inventory all creative formats currently in use per platform
 - Identify format gaps: Is the client using static only on Meta when video drives 40% better CPA? Is there no carousel format despite having a catalog? Are there no UGC style creatives despite being in a vertical where UGC outperforms polished content?
-- Compare format mix to vertical best practices from `skills/ab-testing-experimentation/SKILL.md`
+- Compare format mix to vertical best practices from `.claude/skills/ab-testing-experimentation/SKILL.md`
 
 ### Step 4: Identify Top Performers and Bottom Performers
 
@@ -83,7 +83,7 @@ Based on the performance gaps identified:
 - For any creative with high CTR but low conversion rate, recommend a landing page alignment test
 - For any creative with low CTR but high conversion rate, recommend a hook or thumbnail test
 - Prioritize tests by expected impact and ease of production
-- Reference the testing methodology from `skills/ab-testing-experimentation/SKILL.md` for sample size requirements and statistical significance thresholds
+- Reference the testing methodology from `.claude/skills/ab-testing-experimentation/SKILL.md` for sample size requirements and statistical significance thresholds
 
 Structure each test recommendation with:
 - Hypothesis: "If we [change X], we expect [metric Y] to improve by [estimated Z%] because [rationale]"
@@ -150,6 +150,6 @@ The final deliverable is a draft creative performance audit report saved to the 
 - Requires Chrome browser access to navigate Google Ads and TikTok Ads UIs
 - Requires Meta Ads MCP tools for pulling Meta creative data
 - Requires the deliverable recipes framework at .claude/frameworks/deliverable-recipes.md
-- Requires the A/B testing skill at skills/ab-testing-experimentation/SKILL.md
-- Requires the platform strategist agent at agents/platform-strategist.md
+- Requires the A/B testing skill at .claude/skills/ab-testing-experimentation/SKILL.md
+- Requires the platform strategist agent at .claude/agents/platform-strategist/platform-strategist.md
 - Requires an existing client profile at clients/{client-name}/ (or will create one)

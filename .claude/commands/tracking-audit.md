@@ -42,7 +42,7 @@ Using Chrome tools, for each key page:
 
 ### Step 3: Analysis
 
-Apply the full methodology from `agents/tracking-auditor.md`:
+Apply the full methodology from `.claude/agents/tracking-auditor/tracking-auditor.md`:
 - Tag discovery and conflict detection
 - Event configuration completeness per platform
 - Data quality verification

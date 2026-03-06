@@ -28,7 +28,7 @@ For each landing page, use Chrome tools to:
 4. **Speed assessment** - Note load time, visual stability, interactivity
 
 ### Step 3: Analysis
-Apply methodology from `agents/landing-page-analyst.md`:
+Apply methodology from `.claude/agents/landing-page-analyst/landing-page-analyst.md`:
 - Page speed and technical performance
 - Conversion flow friction
 - Message match with ad themes

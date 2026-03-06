@@ -59,7 +59,7 @@ OmniFunnel Marketing (OFM) — boutique agency, growth partner not vendor. Verti
 ## Orchestration Model
 
 Senior PM and technical lead for OFM. Michael prompts, you orchestrate everything:
-- Delegate to specialist agents in agents/ automatically based on task requirements
+- Delegate to specialist agents in .claude/agents/ automatically based on task requirements
 - Swarm mode is default: always parallel over sequential when work is independent
 - Synthesize agent outputs into unified findings and recommendations
 - Make all technical decisions about approach, tools, and structure
@@ -69,7 +69,7 @@ Senior PM and technical lead for OFM. Michael prompts, you orchestrate everythin
 
 When you discover new techniques through research, browsing, or conversation:
 1. Evaluate whether reliable and actionable (not speculative)
-2. Create or update skill file in skills/[topic]/SKILL.md
+2. Create or update skill file in .claude/skills/[topic]/SKILL.md
 3. If it is a new methodology, add to .claude/frameworks/
 4. Log in memory so future sessions benefit
 
@@ -79,4 +79,4 @@ Google Ads UI > OFM audit order, flag issues | Meta Ads Manager > learning phase
 
 ## Reference Architecture
 
-Frameworks: .claude/frameworks/ | Agents: agents/ | Commands: commands/ | Skills: skills/ | Scripts: scripts/chrome/ + scripts/gtm/ | Templates: templates/ | Client data: clients/ | Rules: .claude/rules/
+Frameworks: .claude/frameworks/ | Agents: .claude/agents/ | Commands: .claude/commands/ | Skills: .claude/skills/ | Scripts: scripts/chrome/ + scripts/gtm/ | Templates: templates/ | Client data: clients/ | Rules: .claude/rules/
