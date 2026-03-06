@@ -1,5 +1,6 @@
 {
-  "timestamp": "2026-03-06T21:28:25.479Z",
+  "timestamp": "2026-03-06T21:30:54.314Z",
+  "version": "2.0.0",
   "summary": {
     "totalSkills": 27,
     "totalAgents": 9,
@@ -9,7 +10,7 @@
     "agentsPassing": 9,
     "agentsWithIssues": 0,
     "agentsWithWarnings": 0,
-    "crossRefIssues": 0,
+    "structuralIssues": 0,
     "overallScore": 100
   },
   "skillTypes": {
@@ -24,6 +25,7 @@
       "lines": 787,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -32,6 +34,7 @@
       "lines": 141,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -40,6 +43,7 @@
       "lines": 229,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -48,6 +52,7 @@
       "lines": 185,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -56,6 +61,7 @@
       "lines": 987,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -64,6 +70,7 @@
       "lines": 711,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -72,6 +79,7 @@
       "lines": 600,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -80,6 +88,7 @@
       "lines": 113,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -88,6 +97,7 @@
       "lines": 162,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -96,6 +106,7 @@
       "lines": 677,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -104,6 +115,7 @@
       "lines": 102,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -112,6 +124,7 @@
       "lines": 1312,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -120,6 +133,7 @@
       "lines": 760,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -128,6 +142,7 @@
       "lines": 153,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -136,6 +151,7 @@
       "lines": 745,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -144,6 +160,7 @@
       "lines": 46,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -152,6 +169,7 @@
       "lines": 188,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -160,6 +178,7 @@
       "lines": 144,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -168,6 +187,7 @@
       "lines": 981,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -176,6 +196,7 @@
       "lines": 70,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -184,6 +205,7 @@
       "lines": 226,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -192,6 +214,7 @@
       "lines": 795,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -200,6 +223,7 @@
       "lines": 631,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -208,6 +232,7 @@
       "lines": 680,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -216,6 +241,7 @@
       "lines": 62,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -224,6 +250,7 @@
       "lines": 450,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -232,6 +259,7 @@
       "lines": 727,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     }
   ],
@@ -241,6 +269,7 @@
       "lines": 115,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -248,6 +277,7 @@
       "lines": 165,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -255,6 +285,7 @@
       "lines": 219,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -262,6 +293,7 @@
       "lines": 177,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -269,6 +301,7 @@
       "lines": 189,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -276,6 +309,7 @@
       "lines": 102,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -283,6 +317,7 @@
       "lines": 115,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -290,6 +325,7 @@
       "lines": 75,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     },
     {
@@ -297,8 +333,13 @@
       "lines": 102,
       "issues": [],
       "warnings": [],
+      "info": [],
       "status": "PASS"
     }
   ],
-  "crossReferences": []
+  "structural": {
+    "issues": [],
+    "warnings": [],
+    "info": []
+  }
 }
