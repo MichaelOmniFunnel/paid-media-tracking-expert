@@ -43,3 +43,12 @@ Apply methodology from `.claude/agents/landing-page-analyst.md`:
 ### Step 4: Report Generation
 Save to `clients/{client-name}/reports/{date}-landing-page-audit.md`.
 Include specific recommendations with mockup descriptions where helpful.
+
+## Output Verification
+
+Before presenting the audit to Michael, confirm:
+- Both desktop and mobile experiences were evaluated for every page
+- Page speed assessment reflects actual load times observed, not assumed
+- Message match evaluation references the actual ad copy driving traffic
+- Conversion flow was walked through end to end (not just the landing page)
+- Recommendations include specific changes, not just "improve page speed"

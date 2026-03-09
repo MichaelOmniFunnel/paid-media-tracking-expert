@@ -3,8 +3,8 @@ name: klaviyo-integration
 description: Audience sync to Google, Meta, and TikTok, revenue attribution, server-side event forwarding, ecommerce integrations, and webhook automation. Use when someone mentions Klaviyo, email audience sync, Klaviyo segments to ads, or Klaviyo webhook integration.
 disable-model-invocation: true
 model: sonnet
+allowed-tools: Read, Grep, Glob
 ---
-
 # Klaviyo Integration for Paid Media & Tracking
 
 ## Overview
@@ -163,526 +163,78 @@ Every attribution system claims credit for conversions within its window:
 
 ---
 
+
 ## Klaviyo API Integration
 
-### Create Event (Server-Side Event Tracking)
+**Server-side event tracking:** POST to `https://a.klaviyo.com/api/events` with Klaviyo-API-Key header and revision header.
 
-```javascript
-// POST https://a.klaviyo.com/api/events
-// Server-side event creation using Klaviyo's revision 2024-02-15+ API
+**Client-side:** `_learnq.push(["identify", {...}])` and `_learnq.push(["track", "Event", {...}])`. Subject to ad blockers.
 
-var https = require('https');
+**Rate limits:** Burst 350 req/sec, steady 3,500 req/min. Use batch endpoints for bulk operations.
 
-function sendKlaviyoEvent(apiKey, eventData) {
-  var payload = JSON.stringify({
-    data: {
-      type: 'event',
-      attributes: {
-        metric: {
-          data: {
-            type: 'metric',
-            attributes: {
-              name: eventData.eventName
-            }
-          }
-        },
-        profile: {
-          data: {
-            type: 'profile',
-            attributes: {
-              email: eventData.email,
-              phone_number: eventData.phone,
-              first_name: eventData.firstName,
-              last_name: eventData.lastName,
-              properties: {
-                source: eventData.source || 'website'
-              }
-            }
-          }
-        },
-        properties: eventData.properties || {},
-        value: eventData.value || 0,
-        time: eventData.time || new Date().toISOString(),
-        unique_id: eventData.uniqueId || null
-      }
-    }
-  });
-
-  var options = {
-    hostname: 'a.klaviyo.com',
-    path: '/api/events',
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Klaviyo-API-Key ' + apiKey,
-      'revision': '2024-10-15',
-      'Content-Length': Buffer.byteLength(payload)
-    }
-  };
-
-  var req = https.request(options, function(res) {
-    var body = '';
-    res.on('data', function(chunk) { body += chunk; });
-    res.on('end', function() {
-      if (res.statusCode === 202) {
-        console.log('Event created successfully');
-      } else {
-        console.error('Error: ' + res.statusCode + ' - ' + body);
-      }
-    });
-  });
-
-  req.on('error', function(err) {
-    console.error('Request error: ' + err.message);
-  });
-
-  req.write(payload);
-  req.end();
-}
-
-// Usage: Track a purchase event
-sendKlaviyoEvent('pk_your_private_api_key', {
-  eventName: 'Placed Order',
-  email: 'customer@example.com',
-  phone: '+15551234567',
-  firstName: 'John',
-  lastName: 'Doe',
-  value: 149.99,
-  properties: {
-    OrderId: 'ORD-12345',
-    Items: [
-      { ProductName: 'Widget', SKU: 'WDG-001', Quantity: 2, Price: 49.99 },
-      { ProductName: 'Gadget', SKU: 'GDG-002', Quantity: 1, Price: 50.01 }
-    ],
-    Source: 'google_ads',
-    GCLID: 'abc123def456'
-  }
-});
-```
-
-### Client-Side Event Tracking
-
-```javascript
-// Client-side tracking using Klaviyo's JavaScript SDK
-// This fires from the browser - subject to ad blockers and ITP
-
-// Identify a user (call after login, form submit, or purchase)
-var _learnq = window._learnq || [];
-_learnq.push(['identify', {
-  '$email': 'customer@example.com',
-  '$first_name': 'John',
-  '$last_name': 'Doe',
-  '$phone_number': '+15551234567',
-  'Source': 'paid_search',
-  'GCLID': getUrlParam('gclid') || getCookie('_gcl_aw'),
-  'FBCLID': getUrlParam('fbclid') || getCookie('_fbc')
-}]);
-
-// Track a custom event
-_learnq.push(['track', 'Started Checkout', {
-  '$value': 149.99,
-  'ItemCount': 3,
-  'CheckoutURL': window.location.href
-}]);
-
-// Helper: Extract URL parameter
-function getUrlParam(param) {
-  var urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param) || '';
-}
-
-// Helper: Read cookie value
-function getCookie(name) {
-  var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-  return match ? match[2] : '';
-}
-```
-
-**Rate Limits (Server-Side API):**
-- Burst: 350 requests/second
-- Steady: 3,500 requests/minute
-- Use batch endpoints for bulk operations
+For complete API code (server-side event creation, client-side tracking, payload examples), read references/api-and-enhanced-conversions.md
 
 ---
 
-## Enhanced Conversions & Advanced Matching with Klaviyo Data
+## Enhanced Conversions & Advanced Matching
 
-### Feeding Klaviyo Data to Google Enhanced Conversions
+Klaviyo profile data enriches Google Enhanced Conversions and Meta Advanced Matching:
 
-Klaviyo profile data can enrich Google's Enhanced Conversions by providing hashed PII on the conversion event:
+**Google:** Push user_data (email, phone, address) in purchase dataLayer event. Improves conversion-to-click matching.
 
-```javascript
-// In GTM or server-side GTM: enrich purchase dataLayer with Klaviyo profile data
-// This improves Google's ability to match conversions to ad clicks
+**Meta:** Initialize pixel with Advanced Matching fields (em, ph, fn, ln, ct, st, zp, country, external_id using Klaviyo profile ID). Target EMQ 7+.
 
-// dataLayer push on purchase confirmation page
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'purchase',
-  'transaction_id': 'ORD-12345',
-  'value': 149.99,
-  'currency': 'USD',
-  // Enhanced conversion data (from Klaviyo profile or checkout form)
-  'user_data': {
-    'email': 'customer@example.com',       // or SHA-256 hash
-    'phone_number': '+15551234567',         // or SHA-256 hash
-    'address': {
-      'first_name': 'John',
-      'last_name': 'Doe',
-      'street': '123 Main St',
-      'city': 'Austin',
-      'region': 'TX',
-      'postal_code': '78701',
-      'country': 'US'
-    }
-  }
-});
-```
-
-### Feeding Klaviyo Data to Meta Advanced Matching
-
-```javascript
-// Initialize Meta Pixel with Advanced Matching using Klaviyo profile data
-// This dramatically improves Event Match Quality (target: 7+)
-
-fbq('init', 'PIXEL_ID', {
-  em: 'customer@example.com',     // email (auto-hashed by pixel)
-  ph: '15551234567',              // phone (auto-hashed by pixel)
-  fn: 'john',                     // first name (auto-hashed)
-  ln: 'doe',                      // last name (auto-hashed)
-  ct: 'austin',                   // city
-  st: 'tx',                       // state
-  zp: '78701',                    // zip
-  country: 'us',                  // country
-  external_id: 'klav_abc123'      // Klaviyo profile ID as external_id
-});
-```
+For dataLayer push examples and Meta pixel init code, read references/api-and-enhanced-conversions.md
 
 ---
 
-## Klaviyo Flow Triggers from Ad Conversion Events
+## Klaviyo Flow Triggers from Ad Events
 
-### Triggering Flows from Ad-Driven Actions
+Send "Ad Lead Captured" event to Klaviyo API when form submitted with GCLID. Include source, campaign, keyword. Flow can branch by source property for platform-specific nurture sequences.
 
-Klaviyo flows can be triggered by events that originate from ad clicks:
+**Flow webhooks:** POST profile + event data to SGTM endpoint. Enables feeding Klaviyo engagement data back to ad platforms. HMAC-SHA256 signing available.
 
-```javascript
-// Example: Server-side event that triggers a Klaviyo flow
-// When a lead comes from Google Ads, send them into a nurture sequence
-
-// POST to Klaviyo API when form is submitted with GCLID present
-sendKlaviyoEvent('pk_your_private_api_key', {
-  eventName: 'Ad Lead Captured',
-  email: formData.email,
-  phone: formData.phone,
-  firstName: formData.firstName,
-  lastName: formData.lastName,
-  value: 0,
-  properties: {
-    'Source': 'google_ads',
-    'Campaign': utmData.campaign,
-    'AdGroup': utmData.adGroup,
-    'Keyword': utmData.keyword,
-    'GCLID': utmData.gclid,
-    'LandingPage': utmData.landingPage,
-    'FormName': formData.formName
-  }
-});
-
-// In Klaviyo, create a flow triggered by "Ad Lead Captured" metric
-// Flow can branch based on Source property:
-//   - Google Ads leads -> send specific nurture sequence
-//   - Meta Ads leads -> send different creative sequence
-//   - TikTok leads -> send mobile-optimized sequence
-```
-
-### Webhook Actions in Flows
-
-Klaviyo flows can include webhook actions that POST data to external endpoints:
-
-```javascript
-// Klaviyo Flow Webhook Configuration
-// Action: Webhook in a flow step
-// URL: https://sgtm.yourdomain.com/klaviyo-webhook
-// Method: POST
-// Headers: Content-Type: application/json
-
-// The webhook sends profile and event data to your server-side GTM
-// This enables feeding Klaviyo engagement data BACK to ad platforms
-
-// Example: When a Klaviyo email drives a purchase, notify SGTM
-// so it can fire enhanced conversion events to Google/Meta
-
-// Webhook payload template (configured in Klaviyo):
-// {
-//   "email": "{{ person.email }}",
-//   "phone": "{{ person.phone_number }}",
-//   "first_name": "{{ person.first_name }}",
-//   "last_name": "{{ person.last_name }}",
-//   "event_name": "{{ event.name }}",
-//   "order_value": "{{ event.value }}",
-//   "order_id": "{{ event.OrderId }}",
-//   "klaviyo_profile_id": "{{ person.id }}"
-// }
-```
-
-**Webhook Limitations:**
-- Maximum 10 webhooks per Klaviyo account (system webhooks)
-- Flow webhooks do not count against this limit
-- Webhooks may take up to 3 minutes to begin forwarding after creation
-- HMAC-SHA256 signing available for payload verification
+For flow trigger code and webhook payload templates, read references/flows-ecommerce-serverside.md
 
 ---
 
 ## Ecommerce Platform Integrations
 
-### Shopify + Klaviyo
+**Shopify:** Native real-time sync (Placed Order, Started Checkout, Added to Cart, Viewed Product, Fulfilled, Cancelled, Refunded). Auto catalog sync.
 
-**Native Integration Features:**
-- Real-time event sync for: Active on Site, Viewed Product, Added to Cart, Started Checkout, Placed Order, Ordered Product, Fulfilled Order, Cancelled Order, Refunded Order
-- Automatic catalog sync for product recommendations
-- Back-in-stock flow triggers
-- Customer property sync (total spent, order count, tags)
+**WooCommerce:** Plugin-based. Placed Order fires on "processing" status. Watch for payment gateway status mapping, caching plugin conflicts, and SGTM double-fire.
 
-**Key Events for Paid Media:**
+**Custom/Headless:** Use Klaviyo API directly. Send Placed Order with Items array (ProductName, SKU, Quantity, ItemPrice, RowTotal, ProductURL, ImageURL).
 
-| Klaviyo Event | Trigger | Value Field | Use in Paid Media |
-|---------------|---------|-------------|-------------------|
-| Placed Order | Checkout complete | Order total | Revenue attribution |
-| Started Checkout | Checkout initiated | Cart value | Retargeting audiences |
-| Added to Cart | Cart action | Item price | Retargeting audiences |
-| Viewed Product | Product page view | Product price | Prospecting signals |
-
-**Placed Order Event Properties (Shopify):**
-```javascript
-// Shopify Placed Order event properties available in Klaviyo:
-// $value - order total (used for revenue metrics)
-// OrderId - Shopify order ID
-// Categories - product categories
-// ItemNames - array of product names
-// Items - array of line item objects with:
-//   ProductName, SKU, Quantity, ItemPrice, RowTotal, ProductURL, ImageURL
-// Tags - Shopify order tags
-// DiscountCodes - applied discount codes
-// DiscountValue - total discount amount
-// SourceName - "web", "pos", "shopify_draft_order", etc.
-```
-
-### WooCommerce + Klaviyo
-
-**Integration Notes:**
-- Placed Order fires when WooCommerce order status = "processing"
-- Custom order statuses may not trigger Placed Order (common issue)
-- Real-time sync for orders, checkout, and product views
-- Requires Klaviyo WooCommerce plugin installed and activated
-
-**Common WooCommerce Issues:**
-- Payment gateway order status mapping (some gateways use "on-hold" instead of "processing")
-- Caching plugins (WP Rocket, W3 Total Cache) can interfere with Klaviyo's JavaScript tracking
-- If using server-side tracking via Stape, ensure events are not double-fired from both plugin and SGTM
-
-### Custom Ecommerce (Headless / Custom Platforms)
-
-For non-Shopify/WooCommerce stores, use the Klaviyo API directly:
-
-```javascript
-// Server-side integration for custom ecommerce
-// Call this from your order processing backend
-
-function trackPurchaseToKlaviyo(orderData) {
-  var items = [];
-  for (var i = 0; i < orderData.lineItems.length; i++) {
-    var item = orderData.lineItems[i];
-    items.push({
-      ProductName: item.name,
-      SKU: item.sku,
-      Quantity: item.quantity,
-      ItemPrice: item.price,
-      RowTotal: item.price * item.quantity,
-      ProductURL: item.url,
-      ImageURL: item.imageUrl,
-      Categories: item.categories
-    });
-  }
-
-  sendKlaviyoEvent('pk_your_private_api_key', {
-    eventName: 'Placed Order',
-    email: orderData.customerEmail,
-    phone: orderData.customerPhone,
-    firstName: orderData.firstName,
-    lastName: orderData.lastName,
-    value: orderData.orderTotal,
-    uniqueId: orderData.orderId,
-    properties: {
-      OrderId: orderData.orderId,
-      Categories: orderData.categories,
-      ItemNames: orderData.itemNames,
-      Items: items,
-      DiscountCodes: orderData.discountCodes || [],
-      DiscountValue: orderData.discountTotal || 0,
-      Source: orderData.trafficSource || 'direct'
-    }
-  });
-}
-```
+For Shopify event properties, WooCommerce troubleshooting, and custom integration code, read references/flows-ecommerce-serverside.md
 
 ---
 
-## Server-Side Event Forwarding via Stape + GTM SS
-
-### Architecture: Klaviyo Tag in Server-Side GTM
+## Server-Side Event Forwarding via Stape
 
 ```
-Browser -> GTM Web Container -> GTM Server Container (Stape) -> Klaviyo API
-                                     |-> Google Ads API
-                                     |-> Meta CAPI
-                                     |-> TikTok Events API
+Browser -> GTM Web -> GTM SS (Stape) -> Klaviyo API
+                                    -> Google Ads
+                                    -> Meta CAPI
+                                    -> TikTok Events API
 ```
 
-### Stape Klaviyo Tag Setup
+Add Klaviyo tag from Stape Template Gallery. Configure: public key, action type, contact email, event name, properties. Bypasses ad blockers, enables first-party cookies, single event fans out to all platforms.
 
-1. In your server GTM container, add the **Klaviyo tag** from the Template Gallery
-2. Configure the tag:
-   - **Klaviyo Public API Key**: Your site's public key (starts with site_)
-   - **Action Type**: "Event" (for tracking), "Active on Site" (for page views), "Add to List", or "Create/Update Profile"
-   - **Contact Email**: Map from event data variable
-   - **Event Name**: Map to the event name (e.g., "Placed Order")
-   - **Event Properties**: Map individual properties or pass entire event object
-
-3. **Trigger**: Fire on the appropriate server-side event (e.g., purchase event from GA4 client)
-
-### Server-Side Tracking Benefits for Klaviyo
-
-- **Bypass ad blockers**: Klaviyo's client-side JS is blocked by many ad blockers
-- **First-party cookies**: Store Klaviyo's exchange_id in a first-party cookie set by your server
-- **Data enrichment**: Add server-side data (CRM fields, lead scores) before sending to Klaviyo
-- **Single event source**: One browser event fans out to Klaviyo + Google + Meta + TikTok
-
-### Email Cookie Persistence
-
-```javascript
-// Server-side GTM: Store email in first-party cookie for Klaviyo
-// When a user identifies themselves (form, login, purchase),
-// store their email in a server-set cookie for future page views
-
-// In server-side GTM, use the Klaviyo tag's built-in option:
-// "Store email in cookies" = enabled
-// This allows the tag to use the stored email on subsequent
-// page views even when the user is not actively identified
-
-// Cookie name: _klav_email (set by server GTM)
-// Duration: 365 days (configurable)
-// Domain: your first-party domain
-```
+For Stape Klaviyo tag setup and email cookie persistence, read references/flows-ecommerce-serverside.md
 
 ---
 
-## Klaviyo Webhooks for System Integration
+## Common Issues
 
-### System Webhook Topics
+1. **Audience sync not updating** - Check OAuth, segment size (>1,000 for Google), allow 24-48h
+2. **Revenue double-counting** - Use Shopify as truth, blended ROAS, report Klaviyo email revenue separately
+3. **JS blocked by ad blockers** - Implement server-side via Stape, proxy through first-party domain
+4. **Suppression delays** - Sync is hourly + 24-48h platform processing. Use CAPI for real-time suppression
+5. **WooCommerce missing orders** - Check order status mapping, plugin version, caching conflicts
+6. **Attribution window conflicts** - Klaviyo 5-day open overlaps Google 30-day click. Consider last-click only for reporting
 
-Klaviyo supports subscribing to these webhook topics:
-
-| Topic | Description | Paid Media Use Case |
-|-------|-------------|---------------------|
-| profile.created | New profile added | Trigger welcome ad sequence |
-| profile.updated | Profile data changed | Update audience membership |
-| flow.message.sent | Flow email/SMS sent | Attribution tracking |
-| campaign.message.sent | Campaign sent | Suppress from ads |
-| subscription.created | Email/SMS opt-in | Add to ad audiences |
-| subscription.deleted | Unsubscribed | Suppression lists |
-
-### Webhook Security
-
-```javascript
-// Verify Klaviyo webhook signatures (HMAC-SHA256)
-var crypto = require('crypto');
-
-function verifyKlaviyoWebhook(payload, signature, secret) {
-  var expectedSignature = crypto
-    .createHmac('sha256', secret)
-    .update(payload)
-    .digest('hex');
-
-  return crypto.timingSafeEqual(
-    Buffer.from(signature),
-    Buffer.from(expectedSignature)
-  );
-}
-
-// In your webhook handler:
-// var isValid = verifyKlaviyoWebhook(
-//   req.rawBody,
-//   req.headers['x-klaviyo-signature'],
-//   'your_webhook_secret'
-// );
-```
-
----
-
-## Common Issues & Troubleshooting
-
-### 1. Audience Sync Not Updating
-
-**Symptoms:** Profiles added to Klaviyo segment but not appearing in Google/Meta audience.
-
-**Diagnosis:**
-- Check that the integration is still authorized (OAuth tokens can expire)
-- Verify segment has > 1,000 members (Google minimum)
-- Check Klaviyo's sync status in Lists & Segments > [Segment] > Audience Sync
-- Allow 24-48 hours for initial population
-- Ongoing syncs are hourly; check if enough time has passed
-
-### 2. Revenue Double-Counting
-
-**Symptoms:** Sum of Google Ads + Meta Ads + Klaviyo revenue exceeds Shopify revenue.
-
-**Resolution:**
-- Accept that every platform will over-report by 20-60%
-- Use Shopify as single source of truth for total revenue
-- Calculate blended ROAS: Total Revenue / Total Ad Spend
-- Do NOT reduce platform-reported conversions for optimization; let algorithms use their own attribution
-- Report Klaviyo revenue separately as "email/SMS program performance"
-
-### 3. Klaviyo JS Blocked by Ad Blockers
-
-**Symptoms:** Klaviyo identify/track calls not firing for 30-40% of users.
-
-**Resolution:**
-- Implement server-side tracking via Stape/GTM SS
-- Proxy Klaviyo's tracking endpoint through your first-party domain
-- Use server-side API for critical events (purchases, leads)
-- Client-side tracking for nice-to-have events (product views, page views)
-
-### 4. List Sync Delays Impacting Suppression
-
-**Symptoms:** Recent purchasers still seeing acquisition ads.
-
-**Resolution:**
-- Klaviyo syncs hourly, but platform processing adds 24-48 hours
-- For time-sensitive suppression, use platform-native purchase events (Meta CAPI, Google Enhanced Conversions) in addition to Klaviyo audience sync
-- Audience sync is best for strategic segmentation, NOT real-time suppression
-
-### 5. WooCommerce Orders Not Tracking
-
-**Symptoms:** Placed Order events missing in Klaviyo for WooCommerce store.
-
-**Resolution:**
-- Verify order status is "processing" (not "on-hold" or custom status)
-- Check that Klaviyo WooCommerce plugin is active and up to date
-- Verify API keys in plugin settings
-- Check for caching plugin conflicts (WP Rocket, W3TC)
-- If using server-side GTM, ensure events are not duplicated between plugin and SGTM
-
-### 6. Attribution Window Conflicts
-
-**Symptoms:** Klaviyo claims credit for purchases that were clearly ad-driven.
-
-**Resolution:**
-- Klaviyo default windows: 5-day email open, 1-day email click, 24hr SMS
-- These can overlap with Google's 30-day click window and Meta's 7-day click window
-- Consider narrowing Klaviyo's attribution window to "last click only" for reporting
-- Use UTM parameters on all Klaviyo emails to distinguish email traffic in analytics
+For detailed diagnosis and resolution steps, read references/webhooks-and-troubleshooting.md
 
 ---
 

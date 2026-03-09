@@ -2,7 +2,7 @@
 name: full-audit
 description: Complete multi-platform paid media audit orchestrating all specialist agents in parallel. Covers tracking, landing pages, signal quality, platform strategy, and attribution. Use when someone says 'full audit', 'complete audit', 'audit everything', 'account health check', or wants a comprehensive review of their advertising.
 argument-hint: "[client-name] [website-url]"
-allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent, mcp__google-analytics__run_report, mcp__google-analytics__get_account_summaries, mcp__google-analytics__get_property_details, mcp__google-analytics__get_custom_dimensions_and_metrics, mcp__google-analytics__list_google_ads_links, mcp__google-ads__list_accounts, mcp__google-ads__get_campaign_performance, mcp__google-ads__get_ad_performance, mcp__google-ads__get_ad_creatives, mcp__google-ads__run_gaql, mcp__google-ads__execute_gaql_query, mcp__google-ads__get_image_assets, mcp__google-ads__get_asset_usage, mcp__google-ads__get_account_currency, mcp__google-search-console__search_analytics, mcp__google-search-console__enhanced_search_analytics
 ---
 # Full Paid Media & Tracking Audit
 
@@ -91,6 +91,16 @@ Consolidate all agent findings into a single report following the template in `t
 2. Save individual findings to `clients/{client-name}/findings/`
 3. Update `clients/{client-name}/tracking-config.json` with discovered tracking setup
 4. Update `clients/{client-name}/profile.json` with any new information
+
+## Output Verification
+
+Before presenting the audit to Michael, confirm:
+- All five specialist agents returned findings (no silent failures)
+- Findings reference live data, not cached or assumed values
+- Every finding includes severity rating and evidence
+- Implementation roadmap is prioritized with clear phases
+- Client memory (history.md, open-items.md) was updated
+- Report saved to the correct client directory
 
 ## Output
 

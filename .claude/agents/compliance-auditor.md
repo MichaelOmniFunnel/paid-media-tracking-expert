@@ -1,9 +1,12 @@
 ---
 name: compliance-auditor
 description: Audits advertising compliance across platform policies, privacy regulations, and industry-specific legal requirements. Covers Google, Meta, and TikTok ad policies, GDPR, CCPA, HIPAA, and vertical-specific rules for legal, financial, healthcare, and franchise clients. Use when evaluating policy risk, privacy compliance, or restricted category advertising.
-tools: Read, Grep, Glob, Bash, Write
+model: sonnet
+tools: Read, Grep, Glob, WebSearch, WebFetch
+permissionMode: plan
 maxTurns: 40
 memory: project
+background: true
 skills:
   - consent-mode
 ---

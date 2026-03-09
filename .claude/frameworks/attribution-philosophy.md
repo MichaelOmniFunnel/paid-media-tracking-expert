@@ -5,6 +5,9 @@ Every platform overclaims. No single platform's numbers are accurate in isolatio
 
 ## Practical Approach
 1. Pull reported conversions from all active platforms for the same period
+   - Google Ads: use `mcp__google-ads__get_campaign_performance` or `mcp__google-ads__run_gaql` for programmatic data
+   - Meta Ads: use `mcp__meta-ads__get_insights` or Chrome browser
+   - GA4 (neutral layer): use `mcp__google-analytics__run_report` for source/medium reconciliation
 2. Compare the sum against actual orders in Shopify, NetSuite, or CRM
 3. The ratio reveals the overlap and inflation factor for that client
 4. Apply this factor when making optimization decisions

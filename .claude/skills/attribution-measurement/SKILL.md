@@ -2,6 +2,7 @@
 name: attribution-measurement
 description: Cross-platform attribution, conversion modeling, measurement frameworks, value-based bidding readiness, and incrementality testing. Use when someone mentions attribution, cross-platform measurement, conversion modeling, VBB readiness, data-driven attribution, last-click vs multi-touch, or which platform is driving results.
 model: sonnet
+allowed-tools: Read, Grep, Glob, mcp__google-analytics__run_report, mcp__google-analytics__get_account_summaries, mcp__google-analytics__get_property_details, mcp__google-analytics__list_google_ads_links, mcp__google-ads__list_accounts, mcp__google-ads__get_campaign_performance, mcp__google-ads__run_gaql, mcp__google-ads__get_account_currency
 ---
 
 # Attribution & Measurement for Paid Media

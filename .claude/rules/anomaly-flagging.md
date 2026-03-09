@@ -2,6 +2,9 @@
 
 Automatically flag these anomalies during any platform session without being asked.
 
+## Data Sources for Anomaly Detection
+Google Ads anomalies can be detected via Google Ads MCP tools (mcp__google-ads__get_campaign_performance, mcp__google-ads__run_gaql) or Chrome browser. GA4 event anomalies can be detected via GA4 MCP (mcp__google-analytics__run_report). Meta and TikTok anomalies require Chrome browser (Events Manager, Ads Manager). All Google MCP tools are read only and safe to use automatically without approval.
+
 ## Google Ads
 - Campaigns in limited budget that are hitting targets
 - Bidding strategies still in learning

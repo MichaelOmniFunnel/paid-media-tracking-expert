@@ -2,7 +2,7 @@
 name: quarterly-review
 description: Comprehensive quarterly strategy review with cross-platform analysis, benchmark comparison, trend identification, and strategic planning. Use when someone mentions 'quarterly review', 'QBR', 'quarterly strategy', 'Q1 review', 'Q2 review', 'Q3 review', 'Q4 review', or strategic planning.
 argument-hint: "[client-name] [quarter]"
-allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent, mcp__google-analytics__run_report, mcp__google-analytics__get_account_summaries, mcp__google-analytics__get_property_details, mcp__google-analytics__list_google_ads_links, mcp__google-ads__list_accounts, mcp__google-ads__get_campaign_performance, mcp__google-ads__get_ad_performance, mcp__google-ads__run_gaql, mcp__google-ads__execute_gaql_query, mcp__google-ads__get_account_currency, mcp__google-search-console__search_analytics, mcp__google-search-console__enhanced_search_analytics, mcp__google-search-console__detect_quick_wins
 ---
 # Quarterly Strategy Review
 
@@ -36,13 +36,13 @@ If no client folder exists, create one following the standard structure.
 
 Gather comprehensive performance data for the full quarter from each active platform:
 
-**Google Ads:** Navigate to the Google Ads UI via Chrome. Pull account level and campaign level metrics for the full quarter. Capture: total spend, total conversions, total conversion value, CPA, ROAS, impression share (Search), CTR, CPC, Quality Score distribution. Break down by campaign type (Search, Shopping, Performance Max, Display, Demand Gen, Video). Pull month over month data within the quarter to identify trends. Pull change history for the quarter to document all significant changes made.
+**Google Ads:** Use `mcp__google-ads__get_campaign_performance` for campaign level metrics for the full quarter (spend, conversions, conversion value, CPA, ROAS, CTR, CPC). Use `mcp__google-ads__run_gaql` for impression share, Quality Score distribution, and campaign type breakdowns. Pull month over month data within the quarter using date segmented GAQL queries to identify trends. Fall back to Chrome browser for change history review.
 
 **Meta Ads:** Navigate to Meta Ads Manager via Chrome or use the Meta Ads MCP tools. Pull account level and campaign level metrics for the full quarter. Capture: total spend, total results, cost per result, ROAS, reach, frequency, CPM, CTR, unique link clicks. Break down by campaign objective and funnel stage. Pull month over month data within the quarter. Check Events Manager for CAPI health and event match quality trends over the quarter.
 
 **TikTok Ads:** Navigate to TikTok Ads Manager via Chrome. Pull account level and campaign level metrics. Capture: total spend, conversions, CPA, CPM, CTR, video views, average watch time, engagement rate. Pull month over month data within the quarter.
 
-**GA4:** Navigate to GA4 via Chrome. Pull traffic acquisition by source/medium for the full quarter. Pull ecommerce or conversion reports by source/medium. Pull user acquisition data. Note total sessions, conversions, and revenue attributed to each paid channel. Compare to the prior quarter and the same quarter last year if data is available.
+**GA4:** Use `mcp__google-analytics__run_report` to pull traffic acquisition by source/medium for the full quarter (sessions, conversions, revenue by paid channel). Pull ecommerce and user acquisition reports programmatically. Compare to the prior quarter and same quarter last year using date range parameters. Fall back to Chrome browser for advanced explorations.
 
 **Ecommerce Platform (Shopify, WooCommerce, NetSuite):** Navigate via Chrome. Pull actual revenue, order count, AOV, new vs returning customer split for the full quarter. This is the source of truth for reconciliation.
 
@@ -206,6 +206,18 @@ Update the client's open-items.md with all action items for the upcoming quarter
 Update the client's history.md with a session summary noting the quarterly review was completed.
 
 Present the draft to Michael with a brief summary: "Quarterly review for [Client Name] for [Quarter Year] is ready for review. Key highlights: [top 3 points]. Draft saved to [path]. Want me to walk through it or convert to Word format?"
+
+## Output Verification
+
+Before presenting the QBR to Michael, confirm:
+- Performance data covers the full 90 day quarter (no partial months)
+- Actual commerce revenue was used for blended ROAS, not platform reported
+- Benchmark comparisons reference the correct vertical and account maturity level
+- Q+1 recommendations are tied to specific findings, not generic best practices
+- Budget allocation recommendations include dollar amounts and percentages
+- Competitive analysis is based on current auction insights, not assumptions
+- Client memory (history.md, open-items.md) was updated
+- Draft saved to the correct client reports directory
 
 ## Output
 

@@ -13,6 +13,7 @@ Before any budget is moved, added, or removed, a comprehensive baseline must be 
 ### What to Document
 
 **Platform Level Metrics (trailing 30 days and trailing 90 days)**
+Use MCP tools for programmatic data collection: `mcp__google-ads__get_campaign_performance` for Google Ads metrics, `mcp__google-analytics__run_report` for GA4 source/medium data, `mcp__meta-ads__get_insights` for Meta metrics. Chrome browser for TikTok and any data not available via API.
 - Total spend per platform
 - Total conversions per platform (platform reported)
 - Blended ROAS and blended CPA (from the reporting pipeline reconciliation methodology)

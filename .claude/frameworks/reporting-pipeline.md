@@ -24,15 +24,19 @@ Platform data is never used to calculate total revenue, total ROI, or total busi
 
 ## Data Collection Methodology
 
+### Data Source Priority
+For Google Ads and GA4 data, prefer MCP API tools over Chrome browser navigation. MCP tools provide structured data that can be processed programmatically and are faster than screenshot based extraction. Fall back to Chrome browser for: change history, Performance Max asset group details, visual UI elements, and any data not exposed via the API.
+
 ### Google Ads
+**Primary source: Google Ads MCP** (`mcp__google-ads__get_campaign_performance`, `mcp__google-ads__run_gaql`)
 Pull the following at each reporting cadence:
 - Account level: total spend, conversions, conversion value, all conversion actions count
 - Campaign level: spend, impressions, clicks, conversions, conversion value, cost per conversion, conversion rate, impression share, search impression share (search campaigns), CTR, avg CPC
-- Ad group level (for search): same metrics plus search terms report
+- Ad group level (for search): same metrics plus search terms report (via GAQL against search_term_view)
 - Asset performance (P MAX): asset group performance, listing group performance
 - Audience segments: performance by audience segment where available
 - Conversion action breakdown: conversions by action name to verify tracking health
-- Change history: any automated or manual changes during the period
+- Change history: any automated or manual changes during the period (Chrome browser required)
 
 ### Meta Ads
 Pull the following at each reporting cadence:
@@ -53,6 +57,7 @@ Pull the following at each reporting cadence:
 - Events Manager: event health, pixel fire counts, Events API status
 
 ### GA4
+**Primary source: GA4 MCP** (`mcp__google-analytics__run_report`)
 Pull the following as the neutral attribution layer:
 - Sessions by source/medium
 - Conversions by source/medium (default channel grouping)

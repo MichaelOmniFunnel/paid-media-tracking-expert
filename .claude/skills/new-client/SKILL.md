@@ -64,6 +64,15 @@ Provide a brief summary of:
 - Biggest immediate opportunities
 - Recommended next steps (which audit to run first)
 
+## Output Verification
+
+Before presenting the onboarding summary to Michael, confirm:
+- Client directory was created with all required files (profile.json, tracking-config.json)
+- Browser reconnaissance discovered the actual tech stack, not assumed values
+- All pixel and tag IDs found in source code are documented
+- Initial assessment includes specific next steps, not just "run an audit"
+- Asana task was created for this client engagement
+
 ## Output
 
 A fully populated client profile ready for deeper audits, plus an initial assessment summary.

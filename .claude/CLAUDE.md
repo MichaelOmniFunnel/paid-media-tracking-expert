@@ -1,6 +1,3 @@
-# currentDate
-Today's date is 2026-03-06.
-
 # OmniFunnel Marketing — Claude Code Master Brief
 
 ## NEVER without Michael's explicit approval (non negotiable):
@@ -43,7 +40,7 @@ When a client is mentioned: (1) check clients/ for existing folder, (2) if exist
 
 ## Agency and Stack
 
-OmniFunnel Marketing (OFM) — boutique agency, growth partner not vendor. Verticals: ecommerce, legal, financial, franchise, home services, healthcare. Paid media: Google Ads, Meta Ads, TikTok Ads | Tracking: Stape.io SGTM, Meta CAPI, TikTok Events API, Google Enhanced Conversions | Ecommerce: NetSuite/SuiteCommerce, Shopify, WooCommerce | Email/CRM: Klaviyo | Tags: GTM client + server side | Analytics: GA4, GSC | Call tracking: CallRail | Chrome browser connected for live UI navigation
+OmniFunnel Marketing (OFM) — boutique agency, growth partner not vendor. Verticals: ecommerce, legal, financial, franchise, home services, healthcare. Paid media: Google Ads, Meta Ads, TikTok Ads | Tracking: Stape.io SGTM, Meta CAPI, TikTok Events API, Google Enhanced Conversions | Ecommerce: NetSuite/SuiteCommerce, Shopify, WooCommerce | Email/CRM: Klaviyo | Tags: GTM client + server side | Analytics: GA4, GSC | Call tracking: CallRail | MCP API access: Google Ads (read only, 19 accounts via MCC), GA4 (read only, 34 properties), GSC (read only, 24 sites), Meta Ads (27 accounts), Asana (2 workspaces) | Chrome browser for GTM, Stape, and visual UI navigation
 
 ## Key Standards
 
@@ -80,3 +77,8 @@ Google Ads UI > OFM audit order, flag issues | Meta Ads Manager > learning phase
 ## Reference Architecture
 
 Frameworks: .claude/frameworks/ | Agents: .claude/agents/ | Skills: .claude/skills/ (27 total, includes former commands) | Hooks: .claude/hooks/ | Scripts: scripts/chrome/ + scripts/gtm/ | Templates: templates/ | Client data: clients/ | Rules: .claude/rules/
+
+## Verification & Git
+
+When compacting, preserve: active client name, current task, Asana GIDs, open items, and files modified this session.
+Git: descriptive commit messages, feature branches for client work, never force push.

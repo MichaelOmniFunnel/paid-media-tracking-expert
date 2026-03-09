@@ -39,3 +39,16 @@ research/
 mcp-ecosystem-research-2026.md
 mcp-setup-guide.md
 repo-evaluation.md
+
+# Auto memory (machine specific, contains session state)
+.claude/memory/
+
+# Empty artifact files (accidental creation)
+Integrations
+Meta
+Settings
+Webhooks
+UsersmtateOneDriveDesktopClaudeCode/
+
+# Draft docs (not ready for repo)
+OFM-Claude-Agent-Infrastructure-DRAFT.md

@@ -2,7 +2,7 @@
 name: monthly-report
 description: Generate comprehensive monthly performance report pulling data from all platforms with blended metrics and anomaly detection. Use when someone mentions 'monthly report', 'performance report', 'client report', 'how did we do this month', or end of month reporting.
 argument-hint: "[client-name] [month]"
-allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent, mcp__google-analytics__run_report, mcp__google-analytics__get_account_summaries, mcp__google-analytics__get_property_details, mcp__google-ads__list_accounts, mcp__google-ads__get_campaign_performance, mcp__google-ads__get_ad_performance, mcp__google-ads__run_gaql, mcp__google-ads__execute_gaql_query, mcp__google-ads__get_account_currency
 ---
 # Monthly Client Performance Report
 
@@ -27,13 +27,13 @@ Read the client profile from clients/{client-name}/profile.md to identify which 
 
 For each active platform, pull the data specified in the reporting pipeline framework:
 
-**Google Ads:** Navigate to the Google Ads UI via Chrome. Pull account level and campaign level metrics for the reporting month. Capture spend, conversions, conversion value, CPA, ROAS, impression share, CTR, CPC. Export or screenshot the campaign performance table. Check the change history for any significant changes made during the month.
+**Google Ads:** Use `mcp__google-ads__get_campaign_performance` to pull campaign level metrics for the reporting month (spend, conversions, conversion value, CPA, ROAS, CTR, CPC). Use `mcp__google-ads__run_gaql` for impression share data and any custom breakdowns needed. Fall back to Chrome browser for change history review and any data not available via API.
 
 **Meta Ads:** Navigate to Meta Ads Manager via Chrome. Pull account level and campaign level metrics for the reporting month. Capture spend, results, cost per result, ROAS, reach, frequency, CPM, CTR. Check Events Manager for event match quality score and any CAPI health issues. Note attribution window being used.
 
 **TikTok Ads:** Navigate to TikTok Ads Manager via Chrome. Pull account level and campaign level metrics. Capture spend, conversions, CPA, CPM, CTR. Check Events Manager for pixel health.
 
-**GA4:** Navigate to GA4 via Chrome. Pull traffic acquisition report by source/medium for the reporting month. Pull e commerce or conversion report by source/medium. Note total sessions, conversions, and revenue attributed to each paid channel.
+**GA4:** Use `mcp__google-analytics__run_report` to pull traffic acquisition by source/medium for the reporting month (sessions, conversions, revenue by paid channel). Pull ecommerce or conversion reports by source/medium programmatically. Fall back to Chrome browser for any advanced explorations or real time data.
 
 **Klaviyo (if active):** Pull email/SMS revenue attribution, campaign performance, flow performance, and list growth for the month.
 
@@ -130,6 +130,17 @@ Update the client's open-items.md with any new action items identified.
 Update the client's history.md with a session summary noting the report was generated.
 
 Present the draft to Michael with a brief summary: "Monthly report for [Client Name] for [Month Year] is ready for review. Key highlights: [top 2 to 3 points]. Draft saved to [path]. Want me to walk through it or make any changes?"
+
+## Output Verification
+
+Before presenting the report to Michael, confirm:
+- All platform data is from the correct reporting month (no stale or wrong period data)
+- Blended ROAS is calculated from actual commerce revenue, not platform reported revenue
+- Anomalies are flagged with severity levels
+- MoM comparisons use the prior month, not an arbitrary baseline
+- Recommendations are specific and data backed, not generic best practices
+- Client memory (history.md, open-items.md) was updated
+- Draft saved to the correct client reports directory
 
 ## Output
 

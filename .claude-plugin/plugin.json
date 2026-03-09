@@ -1,0 +1,7 @@
+{
+  "name": "paid-media-tracking-expert",
+  "description": "OmniFunnel Marketing paid media management, tracking implementation, and ad account auditing",
+  "version": "1.0.0",
+  "skills": "./.claude/skills/",
+  "agents": "./.claude/agents/"
+}

@@ -2,7 +2,7 @@
 name: creative-audit
 description: Cross-platform creative performance audit covering fatigue detection, format diversity, engagement decay, and production roadmap. Use when someone mentions 'creative audit', 'ad fatigue', 'creative refresh', 'which ads are working', 'creative performance', or stale ads.
 argument-hint: "[client-name]"
-allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent, mcp__google-ads__get_ad_creatives, mcp__google-ads__get_ad_performance, mcp__google-ads__get_image_assets, mcp__google-ads__analyze_image_assets, mcp__google-ads__get_asset_usage, mcp__google-ads__run_gaql, mcp__google-ads__execute_gaql_query
 ---
 # Creative Performance Audit
 
@@ -146,6 +146,18 @@ Update the client's open-items.md with any new action items identified.
 Update the client's history.md with a session summary noting the creative audit was performed.
 
 Present the draft to Michael with a brief summary: "Creative audit for [Client Name] is ready for review. Key findings: [top 2 to 3 points]. Draft saved to [path]. Want me to walk through it or make changes?"
+
+## Output Verification
+
+Before presenting the audit to Michael, confirm:
+- Creative data was pulled from live platforms, not cached or sample data
+- Fatigue scoring references actual frequency and CTR trends, not arbitrary thresholds
+- Format diversity assessment covers all platforms in use
+- Top/bottom performer analysis includes spend and CPA/ROAS data
+- A/B test recommendations include sample size and duration requirements
+- 90 day roadmap is prioritized by expected impact, not just effort
+- Client memory (history.md, open-items.md) was updated
+- Draft saved to the correct client reports directory
 
 ## Output
 

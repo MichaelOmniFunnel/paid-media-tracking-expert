@@ -2,7 +2,7 @@
 name: bidding-strategy-audit
 description: Bidding strategy and budget efficiency evaluation across all platforms. Covers strategy alignment, learning phase health, target setting, and automated bidding effectiveness. Use when someone mentions 'bidding audit', 'bid strategy', 'target CPA', 'target ROAS', 'smart bidding', 'learning phase', or budget underspending.
 argument-hint: "[client-name]"
-allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent, mcp__google-ads__list_accounts, mcp__google-ads__get_campaign_performance, mcp__google-ads__run_gaql, mcp__google-ads__execute_gaql_query, mcp__google-ads__get_account_currency
 ---
 # Bidding Strategy Audit
 
@@ -169,6 +169,18 @@ Update the client's open-items.md with any new action items identified.
 Update the client's history.md with a session summary noting the bidding strategy audit was performed.
 
 Present the draft to Michael with a brief summary: "Bidding strategy audit for [Client Name] is ready for review. Key findings: [top 2 to 3 points]. Draft saved to [path]. Want me to walk through it or make changes?"
+
+## Output Verification
+
+Before presenting the audit to Michael, confirm:
+- Every campaign's bidding strategy was verified from the live UI, not assumed
+- Data volume thresholds are based on actual conversion counts, not estimates
+- Target vs actual gap analysis uses trailing 30 day data, not averages
+- Learning phase assessment checks all platforms, not just one
+- Recommendations include specific target values, not just "increase" or "decrease"
+- Historical change analysis covers the full evaluation period
+- Client memory (history.md, open-items.md) was updated
+- Draft saved to the correct client reports directory
 
 ## Output
 

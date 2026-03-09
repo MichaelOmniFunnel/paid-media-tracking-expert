@@ -56,6 +56,9 @@ Testing budget is expected to underperform. A test that consistently hits target
 
 ---
 
+## Data Sources for Pacing Monitoring
+Use Google Ads MCP (`mcp__google-ads__get_campaign_performance`, `mcp__google-ads__run_gaql`) for programmatic spend and conversion monitoring across Google campaigns. Use Meta Ads MCP (`mcp__meta-ads__get_insights`) for Meta spend data. Chrome browser for TikTok pacing and visual dashboards.
+
 ## Scaling Readiness Criteria
 
 Before increasing budget on any campaign, all of the following must be true:

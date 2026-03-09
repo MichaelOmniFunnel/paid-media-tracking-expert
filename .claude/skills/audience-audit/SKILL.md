@@ -2,7 +2,7 @@
 name: audience-audit
 description: Audience infrastructure audit covering targeting strategy, list health, remarketing coverage, overlap analysis, and exclusion strategy. Use when someone mentions 'audience audit', 'targeting review', 'audience overlap', 'remarketing setup', 'custom audiences', or 'lookalike audiences'.
 argument-hint: "[client-name]"
-allowed-tools: Read, Grep, Glob, Bash, Write, Agent
+allowed-tools: Read, Grep, Glob, Bash, Write, Agent, mcp__google-ads__list_accounts, mcp__google-ads__get_campaign_performance, mcp__google-ads__run_gaql, mcp__google-ads__execute_gaql_query, mcp__google-ads__list_resources
 ---
 # Audience Infrastructure Audit
 
@@ -213,6 +213,17 @@ Update the client's open-items.md with any new action items identified.
 Update the client's history.md with a session summary noting the audience audit was performed.
 
 Present the draft to Michael with a brief summary: "Audience infrastructure audit for [Client Name] is ready for review. Key findings: [top 2 to 3 points]. Draft saved to [path]. Want me to walk through it or make changes?"
+
+## Output Verification
+
+Before presenting the audit to Michael, confirm:
+- Audience data was pulled from live platform UIs, not assumptions
+- Overlap percentages reference actual Audience Overlap tool data
+- Remarketing funnel coverage map covers all stages (ToF through post-conversion)
+- List health assessment includes recency, match rate, and size for every list
+- Exclusion strategy gaps are specific (which exclusions are missing, where)
+- Client memory (history.md, open-items.md) was updated
+- Draft saved to the correct client reports directory
 
 ## Output
 

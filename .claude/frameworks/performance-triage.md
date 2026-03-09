@@ -34,11 +34,13 @@ Before assuming performance actually declined, verify that the data you are look
 - Compare client side event count to server side event count (sudden divergence indicates a problem)
 
 ### Tools to Use
+- Google Ads MCP: `mcp__google-ads__run_gaql` to query conversion action status and recent conversion counts
+- GA4 MCP: `mcp__google-analytics__run_report` to verify event volumes and compare periods
 - Chrome DevTools Network tab filtered to tracking endpoints (facebook.com/tr, analytics.google.com, analytics.tiktok.com)
 - GTM Preview and Debug mode
 - Meta Events Manager Test Events tool
-- Google Ads Conversion Diagnostics
-- Stape.io container logs dashboard
+- Google Ads Conversion Diagnostics (Chrome for visual inspection)
+- Stape.io container logs dashboard (Chrome)
 - The extract-pixels.js and capture-network-events.js Chrome scripts from the project toolkit
 
 ### Resolution Actions
@@ -73,11 +75,12 @@ Performance does not exist in a vacuum. Macro factors affect every advertiser in
 - Industry reports or vertical benchmark data for the same period
 
 ### Tools to Use
-- Google Trends comparison for primary keywords (trailing 30 day view)
-- Google Ads Auction Insights report at campaign and ad group level
-- Meta Ads CPM trend chart at account level
-- GA4 source/medium report comparing paid vs organic vs direct traffic trends
-- Competitor monitoring tools or manual competitor ad review via Meta Ad Library and Google Ads Transparency Center
+- Google Ads MCP: `mcp__google-ads__run_gaql` against auction_insights for competitor impression share changes
+- Google Ads MCP: `mcp__google-ads__get_campaign_performance` for CPM, CPC, and CTR trend data
+- GA4 MCP: `mcp__google-analytics__run_report` for source/medium comparison (paid vs organic vs direct trends)
+- Google Trends comparison for primary keywords (trailing 30 day view, Chrome)
+- Meta Ads CPM trend chart at account level (Chrome or mcp__meta-ads__get_insights)
+- Competitor monitoring tools or manual competitor ad review via Meta Ad Library and Google Ads Transparency Center (Chrome)
 
 ### Resolution Actions
 - If seasonal: adjust expectations to match the seasonality index from the budget pacing framework. Reduce budgets proportionally if the season does not justify current spend levels. Do not try to fight seasonal trends with higher bids.
