@@ -1,345 +1,830 @@
 {
-  "timestamp": "2026-03-06T21:30:54.314Z",
-  "version": "2.0.0",
-  "summary": {
-    "totalSkills": 27,
-    "totalAgents": 9,
-    "skillsPassing": 27,
-    "skillsWithIssues": 0,
-    "skillsWithWarnings": 0,
-    "agentsPassing": 9,
-    "agentsWithIssues": 0,
-    "agentsWithWarnings": 0,
-    "structuralIssues": 0,
-    "overallScore": 100
-  },
-  "skillTypes": {
-    "workflow": 9,
-    "reference": 18,
-    "unknown": 0
-  },
-  "skills": [
+  "date": "2026-03-11T13:45:54.876Z",
+  "version": 3,
+  "pass": 163,
+  "fail": 0,
+  "warn": 1,
+  "total": 164,
+  "details": [
     {
-      "name": "ab-testing-experimentation",
-      "type": "reference",
-      "lines": 787,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Line count: 97/100"
     },
     {
-      "name": "attribution-measurement",
-      "type": "reference",
-      "lines": 141,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "No hardcoded date"
     },
     {
-      "name": "audience-audit",
-      "type": "workflow",
-      "lines": 229,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: NEVER without"
     },
     {
-      "name": "bidding-strategy-audit",
-      "type": "workflow",
-      "lines": 185,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: ALWAYS automatic"
     },
     {
-      "name": "callrail-integration",
-      "type": "reference",
-      "lines": 987,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: Client Memory Protocol"
     },
     {
-      "name": "claude-code-mastery",
-      "type": "reference",
-      "lines": 711,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: How Michael Works"
     },
     {
-      "name": "consent-mode",
-      "type": "reference",
-      "lines": 600,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: Agency and Stack"
     },
     {
-      "name": "conversion-optimization",
-      "type": "reference",
-      "lines": 113,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: Key Standards"
     },
     {
-      "name": "creative-audit",
-      "type": "workflow",
-      "lines": 162,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: Orchestration Model"
     },
     {
-      "name": "feed-catalog-optimization",
-      "type": "reference",
-      "lines": 677,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: Platform Detection"
     },
     {
-      "name": "full-audit",
-      "type": "workflow",
-      "lines": 102,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: Reference Architecture"
     },
     {
-      "name": "ga4-bigquery-analytics",
-      "type": "reference",
-      "lines": 1312,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Has section: Verification & Git"
     },
     {
-      "name": "google-ads-scripts",
-      "type": "reference",
-      "lines": 760,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Writing rules extracted to rules file"
     },
     {
-      "name": "google-ads-tracking",
-      "type": "reference",
-      "lines": 153,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "Context management extracted to rules file"
     },
     {
-      "name": "klaviyo-integration",
-      "type": "reference",
-      "lines": 745,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "References agent-orchestration.md"
     },
     {
-      "name": "landing-page-audit",
-      "type": "workflow",
-      "lines": 46,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "CLAUDE.md",
+      "message": "References writing-style.md"
     },
     {
-      "name": "meta-ads-tracking",
-      "type": "reference",
-      "lines": 188,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "9 agent files found (expected 9)"
     },
     {
-      "name": "monthly-report",
-      "type": "workflow",
-      "lines": 144,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "attribution-analyst: has name field"
     },
     {
-      "name": "netsuite-tracking",
-      "type": "reference",
-      "lines": 981,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "attribution-analyst: has description field"
     },
     {
-      "name": "new-client",
-      "type": "workflow",
-      "lines": 70,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "attribution-analyst: correct model tier (sonnet)"
     },
     {
-      "name": "quarterly-review",
-      "type": "workflow",
-      "lines": 226,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "attribution-analyst: has permissionMode: plan"
     },
     {
-      "name": "server-side-tracking",
-      "type": "reference",
-      "lines": 795,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "attribution-analyst: tools are read-only"
     },
     {
-      "name": "shopify-tracking",
-      "type": "reference",
-      "lines": 631,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "attribution-analyst: has background field"
     },
     {
-      "name": "tiktok-ads-tracking",
-      "type": "reference",
-      "lines": 680,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "budget-optimizer: has name field"
     },
     {
-      "name": "tracking-audit",
-      "type": "workflow",
-      "lines": 62,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "budget-optimizer: has description field"
     },
     {
-      "name": "utm-strategy",
-      "type": "reference",
-      "lines": 450,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "budget-optimizer: correct model tier (sonnet)"
     },
     {
-      "name": "woocommerce-tracking",
-      "type": "reference",
-      "lines": 727,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
+      "status": "PASS",
+      "category": "Agents",
+      "message": "budget-optimizer: has permissionMode: plan"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "budget-optimizer: tools are read-only"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "budget-optimizer: has background field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "compliance-auditor: has name field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "compliance-auditor: has description field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "compliance-auditor: correct model tier (sonnet)"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "compliance-auditor: has permissionMode: plan"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "compliance-auditor: tools are read-only"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "compliance-auditor: has background field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "creative-analyst: has name field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "creative-analyst: has description field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "creative-analyst: correct model tier (sonnet)"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "creative-analyst: has permissionMode: plan"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "creative-analyst: tools are read-only"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "creative-analyst: has background field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "keyword-strategist: has name field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "keyword-strategist: has description field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "keyword-strategist: correct model tier (haiku)"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "keyword-strategist: has permissionMode: plan"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "keyword-strategist: tools are read-only"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "keyword-strategist: has background field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "landing-page-analyst: has name field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "landing-page-analyst: has description field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "landing-page-analyst: correct model tier (haiku)"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "landing-page-analyst: has permissionMode: plan"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "landing-page-analyst: tools are read-only"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "landing-page-analyst: has background field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "platform-strategist: has name field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "platform-strategist: has description field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "platform-strategist: correct model tier (sonnet)"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "platform-strategist: has permissionMode: plan"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "platform-strategist: tools are read-only"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "platform-strategist: has background field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "signal-architect: has name field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "signal-architect: has description field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "signal-architect: correct model tier (opus)"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "signal-architect: has permissionMode: plan"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "signal-architect: tools are read-only"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "signal-architect: has background field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "tracking-auditor: has name field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "tracking-auditor: has description field"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "tracking-auditor: correct model tier (opus)"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "tracking-auditor: has permissionMode: plan"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "tracking-auditor: tools are read-only"
+    },
+    {
+      "status": "PASS",
+      "category": "Agents",
+      "message": "tracking-auditor: has background field"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "31 skill directories found"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "full-audit: has Output Verification"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "monthly-report: has Output Verification"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "quarterly-review: has Output Verification"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "new-client: has Output Verification"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "tracking-audit: has Output Verification"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "audience-audit: has Output Verification"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "bidding-strategy-audit: has Output Verification"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "creative-audit: has Output Verification"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "landing-page-audit: has Output Verification"
+    },
+    {
+      "status": "PASS",
+      "category": "Skills",
+      "message": "Description budget: 8979/30000 (30%)"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "anomaly-flagging.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "anomaly-flagging.md: has heading"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "client-memory.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "client-memory.md: has heading"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "security.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "security.md: has heading"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "verification-comments.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "verification-comments.md: has heading"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "writing-style.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "writing-style.md: has heading"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "context-management.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "context-management.md: has heading"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "agent-orchestration.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "agent-orchestration.md: has heading"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "self-learning.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "self-learning.md: has heading"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "mcp-response-efficiency.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "mcp-response-efficiency.md: has heading"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "9/9 expected rules present"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "security.md: has credential protection rules"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "security.md: has ES5 requirement"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "writing-style.md: has dash prohibition"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "agent-orchestration.md: has model tiering table"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "self-learning.md: has promotion criteria"
+    },
+    {
+      "status": "PASS",
+      "category": "Rules",
+      "message": "mcp-response-efficiency.md: has query optimization rules"
+    },
+    {
+      "status": "PASS",
+      "category": "Hooks",
+      "message": "deny-platform-writes.js exists (409 bytes)"
+    },
+    {
+      "status": "PASS",
+      "category": "Hooks",
+      "message": "compact-context.js exists (733 bytes)"
+    },
+    {
+      "status": "PASS",
+      "category": "Hooks",
+      "message": "stop-notify.ps1 exists (332 bytes)"
+    },
+    {
+      "status": "PASS",
+      "category": "Hooks",
+      "message": "post-tool-validate.js exists (3630 bytes)"
+    },
+    {
+      "status": "PASS",
+      "category": "Hooks",
+      "message": "pre-compact-preserve.js exists (3590 bytes)"
+    },
+    {
+      "status": "PASS",
+      "category": "Hooks",
+      "message": "user-prompt-flags.js exists (5017 bytes)"
+    },
+    {
+      "status": "PASS",
+      "category": "Hooks",
+      "message": "deny-platform-writes.js: has deny pattern"
+    },
+    {
+      "status": "PASS",
+      "category": "Hooks",
+      "message": "user-prompt-flags.js: has OFM flags"
+    },
+    {
+      "status": "PASS",
+      "category": "Hooks",
+      "message": "pre-compact-preserve.js: has context preservation logic"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "settings.json is valid JSON"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "18 deny permissions configured"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": ".env file protection configured"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": ".ssh protection configured"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "rm -rf protection configured"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "PreToolUse hook event: 4 matcher(s)"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "PostToolUse hook event: 1 matcher(s)"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "Stop hook event: 1 matcher(s)"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "SessionStart hook event: 1 matcher(s)"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "PreCompact hook event: 1 matcher(s)"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "UserPromptSubmit hook event: 1 matcher(s)"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "TaskCompleted hook event: 1 matcher(s)"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "Meta Ads write blocker configured"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "Google Ads write blocker configured"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "ActiveCampaign write blocker configured"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "Outlook write blocker configured"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "TaskCompleted has prompt-type quality gate"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "settings.local.json is valid JSON"
+    },
+    {
+      "status": "PASS",
+      "category": "Settings",
+      "message": "settings.local.json hooks migrated to settings.json (clean)"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "MEMORY.md: 156 lines (under 160 safe ceiling)"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "instincts.md: has confidence scoring"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "systemic-patterns.md exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "11 frameworks found"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "clients/ exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "templates/ exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "scripts/chrome/ exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "scripts/gtm/ exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "scripts/planning/ exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Client template: profile.json"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Client template: tracking-config.json"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Client template: media-strategy.md"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Client template: history.md"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Client template: open-items.md"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Client template: CLAUDE.md"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "scripts/planning/init-session.sh exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "scripts/planning/init-session.ps1 exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "scripts/planning/check-complete.sh exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "scripts/planning/check-complete.ps1 exists"
+    },
+    {
+      "status": "WARN",
+      "category": "Operational",
+      "message": "Instruction budget: 32993 chars (monitor)"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": ".gitignore includes task_plan.md"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": ".gitignore includes findings.md"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Catchup skill exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "POAS optimization skill exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "SGTM health monitor skill exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Planning with files skill exists"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Template: audit-report.md"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Template: developer-handoff.md"
+    },
+    {
+      "status": "PASS",
+      "category": "Operational",
+      "message": "Template: tracking-implementation-handoff.md"
     }
-  ],
-  "agents": [
-    {
-      "name": "attribution-analyst",
-      "lines": 115,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
-    },
-    {
-      "name": "budget-optimizer",
-      "lines": 165,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
-    },
-    {
-      "name": "compliance-auditor",
-      "lines": 219,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
-    },
-    {
-      "name": "creative-analyst",
-      "lines": 177,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
-    },
-    {
-      "name": "keyword-strategist",
-      "lines": 189,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
-    },
-    {
-      "name": "landing-page-analyst",
-      "lines": 102,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
-    },
-    {
-      "name": "platform-strategist",
-      "lines": 115,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
-    },
-    {
-      "name": "signal-architect",
-      "lines": 75,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
-    },
-    {
-      "name": "tracking-auditor",
-      "lines": 102,
-      "issues": [],
-      "warnings": [],
-      "info": [],
-      "status": "PASS"
-    }
-  ],
-  "structural": {
-    "issues": [],
-    "warnings": [],
-    "info": []
-  }
+  ]
 }

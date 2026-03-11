@@ -1,7 +1,7 @@
 ---
 name: tracking-auditor
 description: Audits conversion tracking implementation across Google Ads, Meta Ads, and TikTok Ads. Evaluates pixel installation, event configuration, tag manager setup, and data layer accuracy. Use when analyzing a client's tracking infrastructure.
-model: sonnet
+model: opus
 tools: Read, Grep, Glob, WebSearch, WebFetch, mcp__google-analytics__run_report, mcp__google-analytics__get_account_summaries, mcp__google-analytics__get_property_details, mcp__google-analytics__get_custom_dimensions_and_metrics
 permissionMode: plan
 maxTurns: 50

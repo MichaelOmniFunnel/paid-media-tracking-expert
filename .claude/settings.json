@@ -15,7 +15,122 @@
       "Read(**/.env)",
       "Read(**/.env.*)",
       "Read(**/credentials*)",
-      "Read(**/secrets*)"
+      "Read(**/secrets*)",
+      "Bash(rm -rf *)",
+      "Bash(sudo *)",
+      "Bash(chmod 777 *)",
+      "Bash(* > /dev/*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__meta-ads__update_*|mcp__meta-ads__create_*|mcp__meta-ads__bulk_update_*|mcp__meta-ads__bulk_upload_*|mcp__meta-ads__duplicate_*|mcp__meta-ads__upload_*|mcp__meta-ads__update_lead_gen_form_status",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/deny-platform-writes.js"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__claude_ai_Zapier__google_ads_set_*|mcp__claude_ai_Zapier__google_ads_add_*|mcp__claude_ai_Zapier__google_ads_create_*|mcp__claude_ai_Zapier__google_ads_send_*|mcp__claude_ai_Zapier__google_ads_remove_*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/deny-platform-writes.js"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__claude_ai_Zapier__activecampaign_create_*|mcp__claude_ai_Zapier__activecampaign_update_*|mcp__claude_ai_Zapier__activecampaign_add_*|mcp__claude_ai_Zapier__activecampaign_remove_*|mcp__claude_ai_Zapier__activecampaign_subscribe_*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/deny-platform-writes.js"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__claude_ai_Zapier__microsoft_outlook_send_*|mcp__claude_ai_Zapier__microsoft_outlook_reply_*|mcp__claude_ai_Zapier__microsoft_outlook_delete_*|mcp__claude_ai_Zapier__microsoft_outlook_create_event",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/deny-platform-writes.js"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__google-ads__*|mcp__meta-ads__*|mcp__google-analytics__*|mcp__google-search-console__*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/post-tool-validate.js"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File scripts/planning/check-complete.ps1 2>/dev/null || bash scripts/planning/check-complete.sh"
+          },
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File .claude/hooks/stop-notify.ps1",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/compact-context.js"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/pre-compact-preserve.js"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/user-prompt-flags.js"
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Before completing this task, verify: (1) every finding has supporting evidence, not just a conclusion; (2) every finding has a stated business impact; (3) every actionable finding has a priority tier (Critical/High/Medium/Low); (4) no placeholder text like [INSERT] or [TBD] is present; (5) if this is client work, the client name is used consistently throughout. If any check fails, note what is missing before finishing."
+          }
+        ]
+      }
     ]
   }
 }

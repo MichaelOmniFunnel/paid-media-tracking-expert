@@ -1,7 +1,7 @@
 ---
 name: keyword-strategist
 description: Evaluates search keyword strategy, search term mining, negative keyword coverage, match type allocation, Quality Score optimization, and Performance Max search theme configuration. Use when analyzing search campaign structure, keyword efficiency, or competitive positioning in search.
-model: sonnet
+model: haiku
 tools: Read, Grep, Glob, WebSearch, WebFetch, mcp__google-ads__list_accounts, mcp__google-ads__get_campaign_performance, mcp__google-ads__get_ad_performance, mcp__google-ads__run_gaql, mcp__google-ads__execute_gaql_query, mcp__google-ads__get_account_currency, mcp__google-ads__list_resources
 permissionMode: plan
 maxTurns: 40

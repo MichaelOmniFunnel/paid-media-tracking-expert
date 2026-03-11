@@ -1,7 +1,7 @@
 ---
 name: signal-architect
 description: Evaluates data signal quality, server-side tracking opportunities, Conversion API integrations, first-party data strategy, and event match quality. Use when analyzing how well a client's data infrastructure feeds advertising platform algorithms.
-model: sonnet
+model: opus
 tools: Read, Grep, Glob, WebSearch, WebFetch, mcp__google-analytics__run_report, mcp__google-analytics__get_account_summaries, mcp__google-analytics__get_property_details, mcp__google-analytics__get_custom_dimensions_and_metrics, mcp__google-analytics__list_google_ads_links
 permissionMode: plan
 maxTurns: 50

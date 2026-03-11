@@ -52,3 +52,8 @@ UsersmtateOneDriveDesktopClaudeCode/
 
 # Draft docs (not ready for repo)
 OFM-Claude-Agent-Infrastructure-DRAFT.md
+
+# Planning with Files working files (session specific, recreated per task)
+task_plan.md
+findings.md
+progress.md

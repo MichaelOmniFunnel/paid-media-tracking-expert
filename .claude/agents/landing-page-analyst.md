@@ -1,7 +1,7 @@
 ---
 name: landing-page-analyst
 description: Analyzes landing pages for conversion rate optimization, page speed, UX friction, and mobile experience. Evaluates how landing page quality affects ad platform Quality Score and campaign performance. Use when auditing client landing pages or conversion flows.
-model: sonnet
+model: haiku
 tools: Read, Grep, Glob, WebSearch, WebFetch
 permissionMode: plan
 maxTurns: 40

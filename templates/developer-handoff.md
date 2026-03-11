@@ -13,11 +13,11 @@
 
 ## Performance Impact
 
-{How this issue specifically affects advertising campaign performance - CPA, ROAS, signal quality, etc.}
+{How this issue specifically affects advertising campaign performance. CPA, ROAS, signal quality, etc.}
 
 ## Current Implementation
 
-{What exists now - include code snippets, URLs, screenshots as applicable}
+{What exists now. Include code snippets, URLs, screenshots as applicable}
 
 ```html
 <!-- Current code if applicable -->
@@ -48,16 +48,16 @@ After implementation, verify the fix by:
 ### Expected Behavior
 {What should happen after the fix is implemented}
 
-## Platform-Specific Notes
+## Platform Specific Notes
 
 **Google Ads:**
-{Any Google-specific considerations}
+{Any Google specific considerations}
 
 **Meta Ads:**
-{Any Meta-specific considerations}
+{Any Meta specific considerations}
 
 **TikTok Ads:**
-{Any TikTok-specific considerations}
+{Any TikTok specific considerations}
 
 ## References
 

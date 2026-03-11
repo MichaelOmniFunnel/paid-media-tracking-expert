@@ -56,13 +56,20 @@ Requires GCLID capture on form submission, stored in CRM, then uploaded via:
 
 GCLID capture implementation:
 ```javascript
-// Capture GCLID from URL and store in hidden form field
+// Capture GCLID from URL and store in hidden form field (ES5 compliant)
 function getGclid() {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('gclid');
+  var params = window.location.search.substring(1).split('&');
+  for (var i = 0; i < params.length; i++) {
+    var pair = params[i].split('=');
+    if (pair[0] === 'gclid') return decodeURIComponent(pair[1] || '');
+  }
+  return '';
 }
-// Store in cookie for cross-page persistence (90-day expiry)
-document.cookie = `gclid=${getGclid()}; max-age=7776000; path=/`;
+// Store in cookie for cross-page persistence (90 day expiry)
+var gclid = getGclid();
+if (gclid) {
+  document.cookie = 'gclid=' + gclid + '; max-age=7776000; path=/';
+}
 ```
 
 ## Google Consent Mode v2
